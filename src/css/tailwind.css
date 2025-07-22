@@ -177,6 +177,19 @@
     @apply px-4 sm:px-6 lg:px-8;
   }
 
+  /* Content container for better responsive layout */
+  .content-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12;
+  }
+
+  .content-container-wide {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12;
+  }
+
+  .content-container-narrow {
+    @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12;
+  }
+
   /* Enhanced accessibility */
   .focus-visible {
     @apply focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 dark:focus:ring-offset-gray-800;
