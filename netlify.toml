@@ -1,0 +1,44 @@
+# Netlify Configuration for MrHeadphones.com
+# 
+# DEPLOYMENT INSTRUCTIONS:
+# 1. Connect your Git repository to Netlify
+# 2. Set build command: npm run build:prod
+# 3. Set publish directory: .
+# 4. Deploy!
+#
+# The configuration below handles all the build settings automatically.
+
+[build]
+  publish = "."
+  command = "npm run build:prod"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate" 
