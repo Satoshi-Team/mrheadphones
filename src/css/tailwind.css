@@ -101,6 +101,31 @@
     @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
   }
 
+  /* Related Articles CTA Button styles */
+  .related-articles-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+  }
+
+  .related-article-btn {
+    @apply bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:border-secondary dark:hover:border-secondary hover:transform hover:-translate-y-1 text-left group;
+  }
+
+  .related-article-btn:hover {
+    @apply bg-gray-50 dark:bg-gray-700;
+  }
+
+  .related-article-btn h3 {
+    @apply font-heading font-semibold text-lg mb-2 text-gray-900 dark:text-white group-hover:text-secondary transition-colors;
+  }
+
+  .related-article-btn p {
+    @apply text-gray-600 dark:text-gray-300 text-sm mb-4;
+  }
+
+  .related-article-btn .btn-arrow {
+    @apply inline-flex items-center text-secondary font-medium text-sm group-hover:translate-x-1 transition-transform;
+  }
+
   /* Category card styles */
   .category-card {
     @apply bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-2xl border border-gray-100 dark:border-gray-700 text-center;
