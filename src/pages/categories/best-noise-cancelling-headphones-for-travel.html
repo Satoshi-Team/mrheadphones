@@ -17,9 +17,9 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../../../public/favicon.svg?v=1.0.1">
 </head>
-<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-200">
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white dark-mode-transition">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/90 dark:bg-background-dark/90 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-700">
+    <nav class="fixed top-0 w-full glass-effect z-50 border-b border-gray-200 dark:border-gray-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
@@ -40,20 +40,20 @@
                 </div>
                 
                 <!-- Dark Mode Toggle -->
-                <button id="darkModeToggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                <button id="darkModeToggle" aria-label="Toggle dark mode" aria-label="Toggle dark mode" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
                     <span class="dark:hidden">🌙</span>
                     <span class="hidden dark:inline">☀️</span>
                 </button>
                 
                 <!-- Mobile Menu Button -->
-                <button id="mobileMenuButton" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                <button id="mobileMenuButton" aria-label="Toggle mobile menu" aria-label="Toggle mobile menu" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
                     <span class="text-xl">☰</span>
                 </button>
             </div>
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-background-dark border-t border-gray-200 dark:border-gray-700">
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
             <div class="px-4 py-2 space-y-2">
                 <a href="/#home" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">🎧 Home</a>
                 <a href="/#categories" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">🔍 Categories</a>
@@ -98,7 +98,7 @@
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Product Card 1 -->
-                    <div class="card">
+                    <div class="card-hover">
                         <div class="text-center mb-4">
                             <div class="text-6xl mb-4">✈️</div>
                             <h3 class="font-heading font-semibold text-xl mb-2">Sony WH-1000XM5</h3>
@@ -130,7 +130,7 @@
                     </div>
 
                     <!-- Product Card 2 -->
-                    <div class="card">
+                    <div class="card-hover">
                         <div class="text-center mb-4">
                             <div class="text-6xl mb-4">🚄</div>
                             <h3 class="font-heading font-semibold text-xl mb-2">Bose QuietComfort 45</h3>
@@ -162,7 +162,7 @@
                     </div>
 
                     <!-- Product Card 3 -->
-                    <div class="card">
+                    <div class="card-hover">
                         <div class="text-center mb-4">
                             <div class="text-6xl mb-4">🎧</div>
                             <h3 class="font-heading font-semibold text-xl mb-2">Apple AirPods Pro 2</h3>
@@ -202,28 +202,28 @@
                 </h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="card">
+                    <div class="card-hover">
                         <h3 class="font-heading font-semibold text-lg mb-3">🔋 Long Battery Life</h3>
                         <p class="text-gray-600 dark:text-gray-300">
                             Look for at least 20+ hours of battery life to cover long flights and travel days without needing to recharge frequently.
                         </p>
                     </div>
                     
-                    <div class="card">
+                    <div class="card-hover">
                         <h3 class="font-heading font-semibold text-lg mb-3">🎧 Comfort for Long Wear</h3>
                         <p class="text-gray-600 dark:text-gray-300">
                             Travel headphones should be comfortable enough to wear for hours during flights, train rides, or long commutes.
                         </p>
                     </div>
                     
-                    <div class="card">
+                    <div class="card-hover">
                         <h3 class="font-heading font-semibold text-lg mb-3">📦 Portability</h3>
                         <p class="text-gray-600 dark:text-gray-300">
                             Consider foldable designs, compact cases, and lightweight options that won't take up valuable luggage space.
                         </p>
                     </div>
                     
-                    <div class="card">
+                    <div class="card-hover">
                         <h3 class="font-heading font-semibold text-lg mb-3">🛡️ Durability</h3>
                         <p class="text-gray-600 dark:text-gray-300">
                             Travel can be rough on electronics. Look for sturdy construction and protective cases for your investment.
@@ -239,21 +239,21 @@
                 </h2>
                 
                 <div class="space-y-6">
-                    <div class="card">
+                    <div class="card-hover">
                         <h3 class="font-heading font-semibold text-lg mb-3">How much noise cancellation do I need for travel?</h3>
                         <p class="text-gray-600 dark:text-gray-300">
                             For air travel, you'll want active noise cancellation (ANC) that can reduce engine noise by 20-30dB. For trains and commuting, even basic ANC can make a significant difference.
                         </p>
                     </div>
                     
-                    <div class="card">
+                    <div class="card-hover">
                         <h3 class="font-heading font-semibold text-lg mb-3">Are over-ear or in-ear better for travel?</h3>
                         <p class="text-gray-600 dark:text-gray-300">
                             Over-ear headphones generally provide better noise cancellation and comfort for long flights, while in-ear options are more portable and better for active travel.
                         </p>
                     </div>
                     
-                    <div class="card">
+                    <div class="card-hover">
                         <h3 class="font-heading font-semibold text-lg mb-3">Can I use noise cancelling headphones during takeoff/landing?</h3>
                         <p class="text-gray-600 dark:text-gray-300">
                             Most airlines allow noise cancelling headphones during all phases of flight, but you may need to remove them during safety announcements.

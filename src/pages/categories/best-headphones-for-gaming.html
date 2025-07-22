@@ -17,9 +17,9 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../../../public/favicon.svg?v=1.0.1">
 </head>
-<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-200">
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white dark-mode-transition">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/90 dark:bg-background-dark/90 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-700">
+    <nav class="fixed top-0 w-full glass-effect z-50 border-b border-gray-200 dark:border-gray-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
@@ -40,20 +40,20 @@
                 </div>
                 
                 <!-- Dark Mode Toggle -->
-                <button id="darkModeToggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                <button id="darkModeToggle" aria-label="Toggle dark mode" aria-label="Toggle dark mode" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
                     <span class="dark:hidden">🌙</span>
                     <span class="hidden dark:inline">☀️</span>
                 </button>
                 
                 <!-- Mobile Menu Button -->
-                <button id="mobileMenuButton" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                <button id="mobileMenuButton" aria-label="Toggle mobile menu" aria-label="Toggle mobile menu" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
                     <span class="text-xl">☰</span>
                 </button>
             </div>
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-background-dark border-t border-gray-200 dark:border-gray-700">
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
             <div class="px-4 py-2 space-y-2">
                 <a href="/#home" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">🎧 Home</a>
                 <a href="/#categories" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">🔍 Categories</a>
@@ -98,7 +98,7 @@
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Product Card 1 -->
-                    <div class="card">
+                    <div class="card-hover">
                         <div class="text-center mb-4">
                             <div class="text-6xl mb-4">🎮</div>
                             <h3 class="font-heading font-semibold text-xl mb-2">SteelSeries Arctis Pro</h3>
@@ -130,7 +130,7 @@
                     </div>
 
                     <!-- Product Card 2 -->
-                    <div class="card">
+                    <div class="card-hover">
                         <div class="text-center mb-4">
                             <div class="text-6xl mb-4">🎮</div>
                             <h3 class="font-heading font-semibold text-xl mb-2">HyperX Cloud Alpha</h3>
@@ -162,7 +162,7 @@
                     </div>
 
                     <!-- Product Card 3 -->
-                    <div class="card">
+                    <div class="card-hover">
                         <div class="text-center mb-4">
                             <div class="text-6xl mb-4">🎮</div>
                             <h3 class="font-heading font-semibold text-xl mb-2">Razer BlackShark V2 Pro</h3>
@@ -202,28 +202,28 @@
                 </h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="card">
+                    <div class="card-hover">
                         <h3 class="font-heading font-semibold text-lg mb-3">🎵 Surround Sound</h3>
                         <p class="text-gray-600 dark:text-gray-300">
                             Virtual 7.1 or 5.1 surround sound helps you pinpoint enemy locations and immerse yourself in the game world.
                         </p>
                     </div>
                     
-                    <div class="card">
+                    <div class="card-hover">
                         <h3 class="font-heading font-semibold text-lg mb-3">🎤 Clear Microphone</h3>
                         <p class="text-gray-600 dark:text-gray-300">
                             Noise-cancelling microphones ensure your teammates hear you clearly without background noise interference.
                         </p>
                     </div>
                     
-                    <div class="card">
+                    <div class="card-hover">
                         <h3 class="font-heading font-semibold text-lg mb-3">🎧 Comfort for Long Sessions</h3>
                         <p class="text-gray-600 dark:text-gray-300">
                             Gaming sessions can last hours. Look for lightweight designs with memory foam cushions and adjustable headbands.
                         </p>
                     </div>
                     
-                    <div class="card">
+                    <div class="card-hover">
                         <h3 class="font-heading font-semibold text-lg mb-3">🔌 Platform Compatibility</h3>
                         <p class="text-gray-600 dark:text-gray-300">
                             Ensure your headphones work with your gaming platform - PC, PlayStation, Xbox, or Nintendo Switch.
@@ -239,21 +239,21 @@
                 </h2>
                 
                 <div class="space-y-6">
-                    <div class="card">
+                    <div class="card-hover">
                         <h3 class="font-heading font-semibold text-lg mb-3">Do I need a gaming headset or can I use regular headphones?</h3>
                         <p class="text-gray-600 dark:text-gray-300">
                             While regular headphones can work, gaming headsets are optimized for gaming with features like surround sound, gaming-specific microphones, and comfort for long sessions.
                         </p>
                     </div>
                     
-                    <div class="card">
+                    <div class="card-hover">
                         <h3 class="font-heading font-semibold text-lg mb-3">Is wireless or wired better for gaming?</h3>
                         <p class="text-gray-600 dark:text-gray-300">
                             Wired headphones typically offer lower latency and no battery concerns, while wireless provides freedom of movement. For competitive gaming, wired is often preferred.
                         </p>
                     </div>
                     
-                    <div class="card">
+                    <div class="card-hover">
                         <h3 class="font-heading font-semibold text-lg mb-3">What's the difference between 7.1 and stereo gaming headphones?</h3>
                         <p class="text-gray-600 dark:text-gray-300">
                             7.1 surround sound provides directional audio cues for better spatial awareness, while stereo offers simpler, more accurate sound reproduction.

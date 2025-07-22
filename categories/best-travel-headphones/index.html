@@ -12,10 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- TailwindCSS -->
-    <link href="../../../dist/output.css?v=1.0.1" rel="stylesheet">
+    <link href="/dist/output.css?v=1.0.3" rel="stylesheet">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="../../../public/favicon.svg?v=1.0.1">
+    <link rel="icon" type="image/svg+xml" href="/public/favicon.svg?v=1.0.3">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-89QWFC1J9M"></script>
     <script>
@@ -26,9 +26,9 @@
       gtag('config', 'G-89QWFC1J9M');
     </script>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-200">
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white dark-mode-transition">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/90 dark:bg-background-dark/90 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-700">
+    <nav class="fixed top-0 w-full glass-effect z-50 border-b border-gray-200 dark:border-gray-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
@@ -49,7 +49,7 @@
                 </div>
                 
                 <!-- Dark Mode Toggle -->
-                <button id="darkModeToggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                <button id="darkModeToggle" aria-label="Toggle dark mode" aria-label="Toggle dark mode" aria-label="Toggle dark mode" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 focus-visible">
                     <span class="dark:hidden">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
@@ -63,7 +63,7 @@
                 </button>
                 
                 <!-- Mobile Menu Button -->
-                <button id="mobileMenuButton" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                <button id="mobileMenuButton" aria-label="Toggle mobile menu" aria-label="Toggle mobile menu" aria-label="Toggle mobile menu" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 focus-visible">
                     <svg class="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
                     </svg>
@@ -72,7 +72,7 @@
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-background-dark border-t border-gray-200 dark:border-gray-700">
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 mobile-menu">
             <div class="px-4 py-2 space-y-2">
                 <a href="/#home" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">Home</a>
                 <a href="/#categories" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">Categories</a>
@@ -84,20 +84,20 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-16 bg-hero-gradient text-white">
+    <section class="pt-32 pb-16 hero-gradient text-white relative overflow-hidden">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl mb-6">
+            <h1 class="font-heading font-bold responsive-heading mb-6">
                 Best Travel Headphones
             </h1>
-            <p class="text-lg sm:text-xl mb-8 text-gray-200 max-w-3xl mx-auto">
+            <p class="responsive-text mb-8 text-gray-200 max-w-3xl mx-auto">
                 Travel in comfort with the best travel headphones. Expert picks for compact, portable headphones with noise cancellation, long battery life, and travel-friendly features.
             </p>
         </div>
     </section>
 
     <!-- Content Section -->
-    <section class="py-12">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="section-padding">
+        <div class="max-w-4xl mx-auto container-padding">
             <!-- Introduction -->
             <div class="prose prose-lg dark:prose-invert max-w-none mb-12">
                 <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
@@ -117,7 +117,7 @@
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Product Card 1 -->
-                    <div class="card">
+                    <div class="card-hover">
                         <div class="text-center mb-4">
                             <div class="mb-4">
                                 <img src="/public/favicon.svg" alt="Headphones Icon" class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto">
@@ -151,7 +151,7 @@
                     </div>
 
                     <!-- Product Card 2 -->
-                    <div class="card">
+                    <div class="card-hover">
                         <div class="text-center mb-4">
                             <div class="mb-4">
                                 <img src="/public/favicon.svg" alt="Headphones Icon" class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto">
@@ -185,7 +185,7 @@
                     </div>
 
                     <!-- Product Card 3 -->
-                    <div class="card">
+                    <div class="card-hover">
                         <div class="text-center mb-4">
                             <div class="mb-4">
                                 <img src="/public/favicon.svg" alt="Headphones Icon" class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto">
@@ -227,28 +227,28 @@
                 </h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="card">
+                    <div class="card-hover">
                         <h3 class="font-heading font-semibold text-lg mb-3">Compact & Portable</h3>
                         <p class="text-gray-600 dark:text-gray-300">
                             Travel headphones should fold or collapse into a compact size that fits easily in carry-on luggage or personal items without taking up valuable space.
                         </p>
                     </div>
                     
-                    <div class="card">
+                    <div class="card-hover">
                         <h3 class="font-heading font-semibold text-lg mb-3">Long Battery Life</h3>
                         <p class="text-gray-600 dark:text-gray-300">
                             Look for at least 20+ hours of battery life to cover long flights or travel days without needing to recharge frequently.
                         </p>
                     </div>
                     
-                    <div class="card">
+                    <div class="card-hover">
                         <h3 class="font-heading font-semibold text-lg mb-3">Noise Cancellation</h3>
                         <p class="text-gray-600 dark:text-gray-300">
                             Active noise cancellation is essential for blocking out engine noise, conversations, and other travel-related sounds for peaceful listening.
                         </p>
                     </div>
                     
-                    <div class="card">
+                    <div class="card-hover">
                         <h3 class="font-heading font-semibold text-lg mb-3">Durable Construction</h3>
                         <p class="text-gray-600 dark:text-gray-300">
                             Travel headphones need to withstand the rigors of travel with sturdy materials, reinforced hinges, and protection against drops and impacts.
@@ -264,21 +264,21 @@
                 </h2>
                 
                 <div class="space-y-6">
-                    <div class="card">
+                    <div class="card-hover">
                         <h3 class="font-heading font-semibold text-lg mb-3">Are over-ear or in-ear headphones better for travel?</h3>
                         <p class="text-gray-600 dark:text-gray-300">
                             Over-ear headphones typically offer better noise cancellation and comfort for long flights, while in-ear options are more compact and portable for shorter trips.
                         </p>
                     </div>
                     
-                    <div class="card">
+                    <div class="card-hover">
                         <h3 class="font-heading font-semibold text-lg mb-3">How important is noise cancellation for travel?</h3>
                         <p class="text-gray-600 dark:text-gray-300">
                             Noise cancellation is highly beneficial for travel as it blocks out engine noise, conversations, and other ambient sounds, making your journey more enjoyable.
                         </p>
                     </div>
                     
-                    <div class="card">
+                    <div class="card-hover">
                         <h3 class="font-heading font-semibold text-lg mb-3">Should I get wireless or wired travel headphones?</h3>
                         <p class="text-gray-600 dark:text-gray-300">
                             Wireless headphones offer more convenience and freedom, but wired options don't require charging and work with in-flight entertainment systems.
@@ -293,13 +293,13 @@
                     Related Articles
                 </h2>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <a href="../best-noise-cancelling-headphones-for-travel/" class="card hover:scale-105 transition-transform">
+                <div class="feature-grid">
+                    <a href="/categories/best-noise-cancelling-headphones-for-travel/" class="card-hover">
                         <h3 class="font-heading font-semibold text-lg mb-2">Best Noise-Cancelling Headphones for Travel</h3>
                         <p class="text-gray-600 dark:text-gray-300">Specialized travel noise cancellation.</p>
                     </a>
                     
-                    <a href="../best-wireless-headphones/" class="card hover:scale-105 transition-transform">
+                    <a href="/categories/best-wireless-headphones/" class="card-hover">
                         <h3 class="font-heading font-semibold text-lg mb-2">Best Wireless Headphones</h3>
                         <p class="text-gray-600 dark:text-gray-300">Wireless freedom for travel.</p>
                     </a>
@@ -328,7 +328,7 @@
                         <li><a href="/#home" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
                         <li><a href="/#categories" class="text-gray-300 hover:text-white transition-colors">Categories</a></li>
                         <li><a href="/#devices" class="text-gray-300 hover:text-white transition-colors">Devices</a></li>
-                        <li><a href="/#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="mailto:hello@mrheadphones.com" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
                     </ul>
                 </div>
                 
@@ -352,6 +352,6 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="../../../src/js/main.js"></script>
+    <script src="/src/js/main.js"></script>
 </body>
 </html> 
