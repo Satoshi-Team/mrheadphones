@@ -10,15 +10,258 @@
 
 [build]
   publish = "."
-  command = "npm run build:netlify"
+  command = "npm run build"
 
-[build.environment]
-  NODE_VERSION = "18"
+[[redirects]]
+  from = "/fr/*"
+  to = "/index.html"
+  status = 200
 
+[[redirects]]
+  from = "/de/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/it/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/nl/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/pl/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/es/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/sv/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/ru/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/uk/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/zh/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/ja/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/ko/*"
+  to = "/index.html"
+  status = 200
+
+# Handle category pages with language prefixes
+[[redirects]]
+  from = "/fr/categories/*"
+  to = "/categories/:splat/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/de/categories/*"
+  to = "/categories/:splat/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/it/categories/*"
+  to = "/categories/:splat/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/nl/categories/*"
+  to = "/categories/:splat/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/pl/categories/*"
+  to = "/categories/:splat/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/es/categories/*"
+  to = "/categories/:splat/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/sv/categories/*"
+  to = "/categories/:splat/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/ru/categories/*"
+  to = "/categories/:splat/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/uk/categories/*"
+  to = "/categories/:splat/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/zh/categories/*"
+  to = "/categories/:splat/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/ja/categories/*"
+  to = "/categories/:splat/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/ko/categories/*"
+  to = "/categories/:splat/index.html"
+  status = 200
+
+# Handle privacy and terms pages with language prefixes
+[[redirects]]
+  from = "/fr/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/de/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/it/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/nl/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/pl/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/es/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/sv/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/ru/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/uk/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/zh/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/ja/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/ko/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/fr/terms"
+  to = "/terms.html"
+  status = 200
+
+[[redirects]]
+  from = "/de/terms"
+  to = "/terms.html"
+  status = 200
+
+[[redirects]]
+  from = "/it/terms"
+  to = "/terms.html"
+  status = 200
+
+[[redirects]]
+  from = "/nl/terms"
+  to = "/terms.html"
+  status = 200
+
+[[redirects]]
+  from = "/pl/terms"
+  to = "/terms.html"
+  status = 200
+
+[[redirects]]
+  from = "/es/terms"
+  to = "/terms.html"
+  status = 200
+
+[[redirects]]
+  from = "/sv/terms"
+  to = "/terms.html"
+  status = 200
+
+[[redirects]]
+  from = "/ru/terms"
+  to = "/terms.html"
+  status = 200
+
+[[redirects]]
+  from = "/uk/terms"
+  to = "/terms.html"
+  status = 200
+
+[[redirects]]
+  from = "/zh/terms"
+  to = "/terms.html"
+  status = 200
+
+[[redirects]]
+  from = "/ja/terms"
+  to = "/terms.html"
+  status = 200
+
+[[redirects]]
+  from = "/ko/terms"
+  to = "/terms.html"
+  status = 200
+
+# Handle 404s for SPA routing
 [[redirects]]
   from = "/*"
   to = "/index.html"
-  status = 200
+  status = 404
+
+[build.environment]
+  NODE_VERSION = "18"
 
 [[headers]]
   for = "/*"

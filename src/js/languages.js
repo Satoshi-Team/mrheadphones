@@ -6,7 +6,8 @@ const LANGUAGES = {
     flag: '🇬🇧',
     flagCode: 'gb',
     locale: 'en-GB',
-    direction: 'ltr'
+    direction: 'ltr',
+    path: ''
   },
   fr: {
     code: 'fr',
@@ -14,7 +15,8 @@ const LANGUAGES = {
     flag: '🇫🇷',
     flagCode: 'fr',
     locale: 'fr-FR',
-    direction: 'ltr'
+    direction: 'ltr',
+    path: '/fr'
   },
   de: {
     code: 'de',
@@ -22,7 +24,8 @@ const LANGUAGES = {
     flag: '🇩🇪',
     flagCode: 'de',
     locale: 'de-DE',
-    direction: 'ltr'
+    direction: 'ltr',
+    path: '/de'
   },
   it: {
     code: 'it',
@@ -30,7 +33,8 @@ const LANGUAGES = {
     flag: '🇮🇹',
     flagCode: 'it',
     locale: 'it-IT',
-    direction: 'ltr'
+    direction: 'ltr',
+    path: '/it'
   },
   nl: {
     code: 'nl',
@@ -38,7 +42,8 @@ const LANGUAGES = {
     flag: '🇳🇱',
     flagCode: 'nl',
     locale: 'nl-NL',
-    direction: 'ltr'
+    direction: 'ltr',
+    path: '/nl'
   },
   pl: {
     code: 'pl',
@@ -46,7 +51,8 @@ const LANGUAGES = {
     flag: '🇵🇱',
     flagCode: 'pl',
     locale: 'pl-PL',
-    direction: 'ltr'
+    direction: 'ltr',
+    path: '/pl'
   },
   es: {
     code: 'es',
@@ -54,7 +60,8 @@ const LANGUAGES = {
     flag: '🇪🇸',
     flagCode: 'es',
     locale: 'es-ES',
-    direction: 'ltr'
+    direction: 'ltr',
+    path: '/es'
   },
   sv: {
     code: 'sv',
@@ -62,7 +69,8 @@ const LANGUAGES = {
     flag: '🇸🇪',
     flagCode: 'se',
     locale: 'sv-SE',
-    direction: 'ltr'
+    direction: 'ltr',
+    path: '/sv'
   },
   ru: {
     code: 'ru',
@@ -70,7 +78,8 @@ const LANGUAGES = {
     flag: '🇷🇺',
     flagCode: 'ru',
     locale: 'ru-RU',
-    direction: 'ltr'
+    direction: 'ltr',
+    path: '/ru'
   },
   uk: {
     code: 'uk',
@@ -78,7 +87,8 @@ const LANGUAGES = {
     flag: '🇺🇦',
     flagCode: 'ua',
     locale: 'uk-UA',
-    direction: 'ltr'
+    direction: 'ltr',
+    path: '/uk'
   },
   zh: {
     code: 'zh',
@@ -86,7 +96,8 @@ const LANGUAGES = {
     flag: '🇨🇳',
     flagCode: 'cn',
     locale: 'zh-CN',
-    direction: 'ltr'
+    direction: 'ltr',
+    path: '/zh'
   },
   ja: {
     code: 'ja',
@@ -94,7 +105,8 @@ const LANGUAGES = {
     flag: '🇯🇵',
     flagCode: 'jp',
     locale: 'ja-JP',
-    direction: 'ltr'
+    direction: 'ltr',
+    path: '/ja'
   },
   ko: {
     code: 'ko',
@@ -102,23 +114,26 @@ const LANGUAGES = {
     flag: '🇰🇷',
     flagCode: 'kr',
     locale: 'ko-KR',
-    direction: 'ltr'
+    direction: 'ltr',
+    path: '/ko'
   }
 };
 
 // Default language
 const DEFAULT_LANGUAGE = 'en';
 
-// Get current language from URL or localStorage
+// Get current language from URL path
 function getCurrentLanguage() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const langFromUrl = urlParams.get('lang');
+  const path = window.location.pathname;
   
-  if (langFromUrl && LANGUAGES[langFromUrl]) {
-    localStorage.setItem('mrheadphones_lang', langFromUrl);
-    return langFromUrl;
+  // Check if path starts with a language code
+  for (const [code, lang] of Object.entries(LANGUAGES)) {
+    if (code !== 'en' && path.startsWith(lang.path)) {
+      return code;
+    }
   }
   
+  // Check localStorage for saved preference
   const savedLang = localStorage.getItem('mrheadphones_lang');
   if (savedLang && LANGUAGES[savedLang]) {
     return savedLang;
@@ -133,7 +148,21 @@ function getCurrentLanguage() {
   return DEFAULT_LANGUAGE;
 }
 
-// Set language
+// Get current page path without language prefix
+function getCurrentPagePath() {
+  const path = window.location.pathname;
+  
+  // Remove language prefix if present
+  for (const [code, lang] of Object.entries(LANGUAGES)) {
+    if (code !== 'en' && path.startsWith(lang.path)) {
+      return path.substring(lang.path.length) || '/';
+    }
+  }
+  
+  return path;
+}
+
+// Set language with proper URL routing
 function setLanguage(langCode) {
   if (!LANGUAGES[langCode]) {
     console.error('Unsupported language:', langCode);
@@ -142,16 +171,24 @@ function setLanguage(langCode) {
   
   localStorage.setItem('mrheadphones_lang', langCode);
   
-  // Update URL without reloading the page
-  const url = new URL(window.location);
-  url.searchParams.set('lang', langCode);
-  window.history.replaceState({}, '', url);
+  // Get current page path
+  const currentPath = getCurrentPagePath();
   
-  // Update dropdown display
-  updateLanguageDropdown(langCode);
+  // Build new URL
+  let newUrl;
+  if (langCode === 'en') {
+    newUrl = currentPath;
+  } else {
+    newUrl = LANGUAGES[langCode].path + currentPath;
+  }
   
-  // Load translations and update content
-  loadTranslations(langCode);
+  // Add query parameters if any
+  if (window.location.search) {
+    newUrl += window.location.search;
+  }
+  
+  // Navigate to new URL
+  window.location.href = newUrl;
 }
 
 // Load translations for the specified language
@@ -222,6 +259,30 @@ function updatePageContent(translations) {
   } else {
     document.documentElement.dir = 'ltr';
   }
+  
+  // Update all internal links to include language prefix
+  updateInternalLinks();
+}
+
+// Update internal links to include language prefix
+function updateInternalLinks() {
+  const currentLang = getCurrentLanguage();
+  const langPath = LANGUAGES[currentLang].path;
+  
+  // Update all internal links
+  document.querySelectorAll('a[href^="/"]').forEach(link => {
+    const href = link.getAttribute('href');
+    
+    // Skip if it's already a language-specific link
+    if (Object.values(LANGUAGES).some(lang => href.startsWith(lang.path))) {
+      return;
+    }
+    
+    // Add language prefix to internal links
+    if (currentLang !== 'en') {
+      link.href = langPath + href;
+    }
+  });
 }
 
 // Update language dropdown display
@@ -267,7 +328,7 @@ function createLanguageDropdown() {
     <div id="languageDropdownMenu" class="hidden absolute right-0 mt-2 w-64 rounded-xl shadow-xl bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 z-50 border border-gray-200 dark:border-gray-700 overflow-hidden">
       <div class="py-2" role="menu" aria-orientation="vertical">
         ${Object.entries(LANGUAGES).map(([code, lang]) => `
-          <button class="w-full text-left px-4 py-3 text-sm flex items-center transition-all duration-200 ${code === currentLang ? 'bg-secondary text-white' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}" role="menuitem" data-lang-option="${code}" onclick="setLanguage('${code}'); toggleLanguageDropdown();">
+          <button class="w-full text-left px-4 py-3 text-sm flex items-center transition-all duration-200 ${code === currentLang ? 'bg-secondary text-white' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}" role="menuitem" data-lang-option="${code}" onclick="setLanguage('${code}');">
             <span class="mr-3 text-lg">${lang.flag}</span>
             <span class="font-medium">${lang.name}</span>
             ${code === currentLang ? '<svg class="w-4 h-4 ml-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>' : ''}
@@ -356,9 +417,11 @@ function initLanguageSystem() {
 window.LanguageSystem = {
   LANGUAGES,
   getCurrentLanguage,
+  getCurrentPagePath,
   setLanguage,
   loadTranslations,
   updatePageContent,
+  updateInternalLinks,
   createLanguageDropdown,
   initLanguageSystem,
   toggleLanguageDropdown

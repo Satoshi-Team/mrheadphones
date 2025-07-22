@@ -1,132 +1,112 @@
 #!/bin/bash
 
-# Script to update sitemap for multilingual support
-echo "Updating sitemap for multilingual support..."
+# Script to update sitemap for multilingual support with proper URL routing
+echo "Updating sitemap for multilingual support with proper URL routing..."
 
-# Define all supported languages
-LANGUAGES=("en" "fr" "de" "it" "nl" "pl" "es" "sv" "ru" "uk" "zh" "ja" "ko")
-
-# Create new sitemap with language variants
+# Create sitemap header
 cat > sitemap.xml << 'EOF'
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 EOF
 
+# Language codes and their hreflang values
+LANGUAGES=("en" "fr" "de" "it" "nl" "pl" "es" "sv" "ru" "uk" "zh" "ja" "ko")
+
 # Function to add URL with language variants
 add_url_with_languages() {
     local path="$1"
     local lastmod="$2"
-    local priority="$3"
-    local changefreq="$4"
     
     echo "  <url>" >> sitemap.xml
     echo "    <loc>https://mrheadphones.com$path</loc>" >> sitemap.xml
     echo "    <lastmod>$lastmod</lastmod>" >> sitemap.xml
-    echo "    <changefreq>$changefreq</changefreq>" >> sitemap.xml
-    echo "    <priority>$priority</priority>" >> sitemap.xml
+    echo "    <changefreq>weekly</changefreq>" >> sitemap.xml
+    echo "    <priority>1.0</priority>" >> sitemap.xml
     
-    # Add language alternatives
+    # Add hreflang links for each language
     for lang in "${LANGUAGES[@]}"; do
         case $lang in
             "en")
                 hreflang="en-GB"
+                url="https://mrheadphones.com$path"
                 ;;
             "fr")
                 hreflang="fr-FR"
+                url="https://mrheadphones.com/fr$path"
                 ;;
             "de")
                 hreflang="de-DE"
+                url="https://mrheadphones.com/de$path"
                 ;;
             "it")
                 hreflang="it-IT"
+                url="https://mrheadphones.com/it$path"
                 ;;
             "nl")
                 hreflang="nl-NL"
+                url="https://mrheadphones.com/nl$path"
                 ;;
             "pl")
                 hreflang="pl-PL"
+                url="https://mrheadphones.com/pl$path"
                 ;;
             "es")
                 hreflang="es-ES"
+                url="https://mrheadphones.com/es$path"
                 ;;
             "sv")
                 hreflang="sv-SE"
+                url="https://mrheadphones.com/sv$path"
                 ;;
             "ru")
                 hreflang="ru-RU"
+                url="https://mrheadphones.com/ru$path"
                 ;;
             "uk")
                 hreflang="uk-UA"
+                url="https://mrheadphones.com/uk$path"
                 ;;
             "zh")
                 hreflang="zh-CN"
+                url="https://mrheadphones.com/zh$path"
                 ;;
             "ja")
                 hreflang="ja-JP"
+                url="https://mrheadphones.com/ja$path"
                 ;;
             "ko")
                 hreflang="ko-KR"
+                url="https://mrheadphones.com/ko$path"
                 ;;
         esac
         
-        echo "    <xhtml:link rel=\"alternate\" hreflang=\"$hreflang\" href=\"https://mrheadphones.com$path?lang=$lang\"/>" >> sitemap.xml
+        echo "    <xhtml:link rel=\"alternate\" hreflang=\"$hreflang\" href=\"$url\"/>" >> sitemap.xml
     done
     
     echo "  </url>" >> sitemap.xml
 }
 
+# Get current date in ISO format
+CURRENT_DATE=$(date -u +"%Y-%m-%d")
+
 # Add main pages
-add_url_with_languages "/" "2025-01-15" "1.0" "weekly"
-add_url_with_languages "/privacy.html" "2025-01-15" "0.3" "monthly"
-add_url_with_languages "/terms.html" "2025-01-15" "0.3" "monthly"
+add_url_with_languages "/" "$CURRENT_DATE"
+add_url_with_languages "/privacy.html" "$CURRENT_DATE"
+add_url_with_languages "/terms.html" "$CURRENT_DATE"
 
 # Add category pages
-add_url_with_languages "/categories/best-bass-headphones/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-bluetooth-headphones/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-budget-gaming-headphones/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-budget-headphones-for-students/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-budget-wireless-headphones/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-closed-back-headphones/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-dynamic-driver-headphones/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-electrostatic-headphones/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-foldable-headphones/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-foldable-headphones-for-travel/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-gaming-headsets/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-headphones-for-airplane-travel/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-headphones-for-android/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-headphones-for-gaming/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-headphones-for-iphone/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-headphones-for-kids/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-headphones-for-mac/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-headphones-for-macbook/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-headphones-for-music/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-headphones-for-ps5/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-headphones-for-running/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-headphones-for-studying/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-headphones-for-work/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-headphones-for-work-from-home/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-headphones-for-xbox/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-headphones-under-100/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-in-ear-monitors/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-noise-cancelling-headphones/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-noise-cancelling-headphones-for-travel/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-noise-cancelling-headphones-under-200/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-office-headphones/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-on-ear-headphones/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-open-back-headphones/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-over-ear-headphones-under-100/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-planar-magnetic-headphones/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-studio-headphones/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-travel-headphones/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-waterproof-headphones/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-wireless-earbuds/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-wireless-headphones/" "2025-01-15" "0.8" "weekly"
-add_url_with_languages "/categories/best-workout-headphones/" "2025-01-15" "0.8" "weekly"
+for dir in categories/*/; do
+    if [ -d "$dir" ]; then
+        # Extract category name from directory
+        category_name=$(basename "$dir")
+        add_url_with_languages "/categories/$category_name/" "$CURRENT_DATE"
+    fi
+done
 
 # Close sitemap
 echo "</urlset>" >> sitemap.xml
 
-echo "Multilingual sitemap updated successfully!"
-echo "Added language variants for all 13 supported languages."
-echo "Total URLs: 43 pages × 13 languages = 559 language variants" 
+echo "Sitemap updated successfully!"
+echo "Generated sitemap with $((${#LANGUAGES[@]} * $(find categories -type d | wc -l) + ${#LANGUAGES[@]} * 3)) URLs"
+echo "Language variants: ${LANGUAGES[*]}" 
