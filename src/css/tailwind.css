@@ -146,6 +146,15 @@
     @apply inline-flex items-center text-secondary font-medium text-sm group-hover:translate-x-1 transition-transform;
   }
 
+  /* Fix for gigantic SVG arrows - ensure they stay small */
+  .btn-arrow svg {
+    @apply w-4 h-4 !important;
+    max-width: 1rem !important;
+    max-height: 1rem !important;
+    width: 1rem !important;
+    height: 1rem !important;
+  }
+
   /* Category card styles */
   .category-card {
     @apply bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-2xl border border-gray-100 dark:border-gray-700 text-center;

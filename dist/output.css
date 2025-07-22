@@ -1003,6 +1003,8 @@ a {
 
 /* Related Articles CTA Button styles */
 
+/* Fix for gigantic SVG arrows - ensure they stay small */
+
 /* Category card styles */
 
 /* Improved form styles */
@@ -1285,6 +1287,10 @@ a {
   height: 4rem;
 }
 
+.h-4 {
+  height: 1rem;
+}
+
 .h-5 {
   height: 1.25rem;
 }
@@ -1299,6 +1305,10 @@ a {
 
 .min-h-screen {
   min-height: 100vh;
+}
+
+.w-4 {
+  width: 1rem;
 }
 
 .w-5 {
@@ -1486,8 +1496,8 @@ a {
   padding: 0.5rem;
 }
 
-.p-4 {
-  padding: 1rem;
+.p-3 {
+  padding: 0.75rem;
 }
 
 .p-6 {
