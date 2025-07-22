@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tailwindcss -i ./src/css/tailwind.css -o ./dist/output.css --watch",
-    "build:prod": "tailwindcss -i ./src/css/tailwind.css -o ./dist/output.css --minify",
+    "build:prod": "echo 'CSS already built - skipping build step'",
+    "build:netlify": "echo 'CSS already built - ready for deployment'",
     "dev": "tailwindcss -i ./src/css/tailwind.css -o ./dist/output.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

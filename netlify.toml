@@ -2,7 +2,7 @@
 # 
 # DEPLOYMENT INSTRUCTIONS:
 # 1. Connect your Git repository to Netlify
-# 2. Set build command: npm run build:prod
+# 2. Set build command: npm run build:netlify
 # 3. Set publish directory: .
 # 4. Deploy!
 #
@@ -10,7 +10,7 @@
 
 [build]
   publish = "."
-  command = "npm run build:prod"
+  command = "npm run build:netlify"
 
 [build.environment]
   NODE_VERSION = "18"
