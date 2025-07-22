@@ -278,4 +278,41 @@
   .responsive-heading {
     @apply text-2xl sm:text-3xl lg:text-4xl xl:text-5xl;
   }
+
+  /* Beautiful flat design for 2025 */
+  .mobile-futuristic {
+    @apply bg-white/95 dark:bg-gray-900/95 backdrop-blur-2xl shadow-2xl;
+  }
+
+  .mobile-menu-item {
+    @apply relative overflow-hidden border border-transparent hover:border-gray-200/50 dark:hover:border-gray-700/50;
+  }
+
+  .mobile-menu-item::before {
+    @apply content-[''] absolute inset-0 bg-gradient-to-r from-secondary/10 to-accent/10 opacity-0 transition-all duration-300;
+  }
+
+  .mobile-menu-item:hover::before {
+    @apply opacity-100;
+  }
+
+  .mobile-menu-item:hover {
+    @apply shadow-lg transform -translate-y-0.5;
+  }
+
+  .futuristic-button {
+    @apply relative overflow-hidden border border-transparent hover:border-gray-200/50 dark:hover:border-gray-700/50;
+  }
+
+  .futuristic-button::before {
+    @apply content-[''] absolute inset-0 bg-gradient-to-r from-secondary/10 to-accent/10 opacity-0 transition-all duration-300;
+  }
+
+  .futuristic-button:hover::before {
+    @apply opacity-100;
+  }
+
+  .futuristic-button:hover {
+    @apply shadow-lg transform -translate-y-0.5;
+  }
 } 

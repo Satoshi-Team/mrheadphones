@@ -1,6 +1,7 @@
 // Dark mode functionality
 function initDarkMode() {
   const darkModeToggle = document.getElementById('darkModeToggle');
+  const mobileDarkModeToggle = document.getElementById('mobileDarkModeToggle');
   const html = document.documentElement;
   
   // Check for saved theme preference or default to light mode
@@ -9,13 +10,21 @@ function initDarkMode() {
     html.classList.add('dark');
   }
   
-  // Toggle dark mode
+  // Function to toggle dark mode
+  function toggleDarkMode() {
+    html.classList.toggle('dark');
+    const isDark = html.classList.contains('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  }
+  
+  // Desktop dark mode toggle
   if (darkModeToggle) {
-    darkModeToggle.addEventListener('click', () => {
-      html.classList.toggle('dark');
-      const isDark = html.classList.contains('dark');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    });
+    darkModeToggle.addEventListener('click', toggleDarkMode);
+  }
+  
+  // Mobile dark mode toggle with emoji
+  if (mobileDarkModeToggle) {
+    mobileDarkModeToggle.addEventListener('click', toggleDarkMode);
   }
 }
 
