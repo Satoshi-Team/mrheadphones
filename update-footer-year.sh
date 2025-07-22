@@ -1,15 +1,15 @@
 #!/bin/bash
 
-# Script to update footer copyright year from 2024 to 2025
-echo "Updating footer copyright year from 2024 to 2025..."
+# Script to update footer copyright year from 2025 to 2025
+echo "Updating footer copyright year from 2025 to 2025..."
 
 # Function to fix a single HTML file
 fix_file() {
     local file="$1"
     
-    # Replace 2024 with 2025 in copyright notices
-    sed -i 's/© 2024 MrHeadphones.com/© 2025 MrHeadphones.com/g' "$file"
-    sed -i 's/2024 MrHeadphones.com/2025 MrHeadphones.com/g' "$file"
+    # Replace 2025 with 2025 in copyright notices
+    sed -i 's/© 2025 MrHeadphones.com/© 2025 MrHeadphones.com/g' "$file"
+    sed -i 's/2025 MrHeadphones.com/2025 MrHeadphones.com/g' "$file"
     
     echo "Updated: $file"
 }
