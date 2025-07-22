@@ -147,6 +147,9 @@ function setLanguage(langCode) {
   url.searchParams.set('lang', langCode);
   window.history.replaceState({}, '', url);
   
+  // Update dropdown display
+  updateLanguageDropdown(langCode);
+  
   // Load translations and update content
   loadTranslations(langCode);
 }
@@ -221,27 +224,53 @@ function updatePageContent(translations) {
   }
 }
 
+// Update language dropdown display
+function updateLanguageDropdown(langCode) {
+  const currentLangData = LANGUAGES[langCode];
+  const dropdownButton = document.getElementById('languageDropdown');
+  const dropdownText = document.getElementById('languageDropdownText');
+  const dropdownFlag = document.getElementById('languageDropdownFlag');
+  
+  if (dropdownButton && dropdownText && dropdownFlag) {
+    dropdownFlag.textContent = currentLangData.flag;
+    dropdownText.textContent = currentLangData.name;
+  }
+  
+  // Update active state in dropdown menu
+  document.querySelectorAll('[data-lang-option]').forEach(option => {
+    const optionLang = option.getAttribute('data-lang-option');
+    if (optionLang === langCode) {
+      option.classList.add('bg-secondary', 'text-white');
+      option.classList.remove('hover:bg-gray-100', 'dark:hover:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
+    } else {
+      option.classList.remove('bg-secondary', 'text-white');
+      option.classList.add('hover:bg-gray-100', 'dark:hover:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
+    }
+  });
+}
+
 // Create language dropdown
 function createLanguageDropdown() {
   const currentLang = getCurrentLanguage();
   const currentLangData = LANGUAGES[currentLang];
   
   const dropdown = document.createElement('div');
-  dropdown.className = 'relative inline-block text-left';
+  dropdown.className = 'relative inline-block text-left ml-4';
   dropdown.innerHTML = `
-    <button id="languageDropdown" class="inline-flex items-center justify-center w-full px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition-colors duration-200" type="button">
-      <span class="mr-2">${currentLangData.flag}</span>
-      <span class="hidden sm:inline">${currentLangData.name}</span>
-      <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+    <button id="languageDropdown" class="inline-flex items-center justify-center px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition-all duration-200 min-w-[120px]" type="button" aria-label="Select language">
+      <span id="languageDropdownFlag" class="mr-2 text-lg">${currentLangData.flag}</span>
+      <span id="languageDropdownText" class="hidden sm:inline font-medium">${currentLangData.name}</span>
+      <svg class="w-4 h-4 ml-2 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20">
         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
       </svg>
     </button>
-    <div id="languageDropdownMenu" class="hidden absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 z-50">
-      <div class="py-1" role="menu" aria-orientation="vertical">
+    <div id="languageDropdownMenu" class="hidden absolute right-0 mt-2 w-64 rounded-xl shadow-xl bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 z-50 border border-gray-200 dark:border-gray-700 overflow-hidden">
+      <div class="py-2" role="menu" aria-orientation="vertical">
         ${Object.entries(LANGUAGES).map(([code, lang]) => `
-          <button class="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center ${code === currentLang ? 'bg-gray-100 dark:bg-gray-700' : ''}" role="menuitem" onclick="setLanguage('${code}')">
-            <span class="mr-3">${lang.flag}</span>
-            <span>${lang.name}</span>
+          <button class="w-full text-left px-4 py-3 text-sm flex items-center transition-all duration-200 ${code === currentLang ? 'bg-secondary text-white' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}" role="menuitem" data-lang-option="${code}" onclick="setLanguage('${code}'); toggleLanguageDropdown();">
+            <span class="mr-3 text-lg">${lang.flag}</span>
+            <span class="font-medium">${lang.name}</span>
+            ${code === currentLang ? '<svg class="w-4 h-4 ml-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>' : ''}
           </button>
         `).join('')}
       </div>
@@ -249,6 +278,31 @@ function createLanguageDropdown() {
   `;
   
   return dropdown;
+}
+
+// Toggle language dropdown
+function toggleLanguageDropdown() {
+  const dropdownMenu = document.getElementById('languageDropdownMenu');
+  const dropdownButton = document.getElementById('languageDropdown');
+  const dropdownIcon = dropdownButton?.querySelector('svg');
+  
+  if (dropdownMenu) {
+    const isHidden = dropdownMenu.classList.contains('hidden');
+    
+    if (isHidden) {
+      dropdownMenu.classList.remove('hidden');
+      dropdownMenu.classList.add('animate-in', 'slide-in-from-top-2', 'duration-200');
+      if (dropdownIcon) {
+        dropdownIcon.style.transform = 'rotate(180deg)';
+      }
+    } else {
+      dropdownMenu.classList.add('hidden');
+      dropdownMenu.classList.remove('animate-in', 'slide-in-from-top-2', 'duration-200');
+      if (dropdownIcon) {
+        dropdownIcon.style.transform = 'rotate(0deg)';
+      }
+    }
+  }
 }
 
 // Initialize language system
@@ -264,14 +318,30 @@ function initLanguageSystem() {
     const dropdownMenu = document.getElementById('languageDropdownMenu');
     
     if (dropdownButton && dropdownMenu) {
-      dropdownButton.addEventListener('click', () => {
-        dropdownMenu.classList.toggle('hidden');
+      dropdownButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleLanguageDropdown();
       });
       
       // Close dropdown when clicking outside
       document.addEventListener('click', (event) => {
         if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
           dropdownMenu.classList.add('hidden');
+          const dropdownIcon = dropdownButton.querySelector('svg');
+          if (dropdownIcon) {
+            dropdownIcon.style.transform = 'rotate(0deg)';
+          }
+        }
+      });
+      
+      // Close dropdown on escape key
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          dropdownMenu.classList.add('hidden');
+          const dropdownIcon = dropdownButton.querySelector('svg');
+          if (dropdownIcon) {
+            dropdownIcon.style.transform = 'rotate(0deg)';
+          }
         }
       });
     }
@@ -290,7 +360,8 @@ window.LanguageSystem = {
   loadTranslations,
   updatePageContent,
   createLanguageDropdown,
-  initLanguageSystem
+  initLanguageSystem,
+  toggleLanguageDropdown
 };
 
 // Initialize when DOM is loaded
