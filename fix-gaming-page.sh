@@ -1,3 +1,9 @@
+#!/bin/bash
+
+echo "🔧 Fixing gaming page manually..."
+
+# Create the correct gaming page
+cat > "categories/best-headphones-for-gaming/index.html" << 'EOF'
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -240,3 +246,6 @@
     <script src="/src/js/main.js"></script>
 </body>
 </html>
+EOF
+
+echo "✅ Gaming page fixed!" 

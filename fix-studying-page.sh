@@ -1,10 +1,16 @@
+#!/bin/bash
+
+echo "🔧 Fixing studying page manually..."
+
+# Create the correct studying page
+cat > "categories/best-headphones-for-studying/index.html" << 'EOF'
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Gaming Headphones 2025 - Top Picks for PC, PS5, Xbox | MrHeadphones.com</title>
-    <meta name="description" content="Find the best gaming headphones for PC, PS5, Xbox, and more. Expert picks with surround sound, clear microphones, and comfort for long gaming sessions.">
+    <title>Best Headphones for Studying 2025 - Focus & Concentration | MrHeadphones.com</title>
+    <meta name="description" content="Find the best headphones for studying and focus. Expert picks for noise isolation, comfort during long study sessions, and audio that enhances concentration.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -90,10 +96,10 @@
     <section class="pt-32 pb-16 hero-gradient text-white relative overflow-hidden">
         <div class="content-container text-center">
             <h1 class="font-heading font-bold responsive-heading mb-6">
-                Best Gaming Headphones
+                Best Headphones for Studying
             </h1>
             <p class="responsive-text mb-8 text-gray-200 max-w-4xl mx-auto">
-                Level up your gaming experience with the best gaming headphones. Expert picks for PC, PS5, Xbox, and more with surround sound and clear microphones.
+                Find the perfect headphones for focused studying. Expert picks for noise isolation, comfort during long study sessions, and audio that enhances concentration.
             </p>
         </div>
     </section>
@@ -104,18 +110,18 @@
             <!-- Introduction -->
             <div class="prose prose-lg dark:prose-invert max-w-none mb-12">
                 <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
-                    Gaming headphones are essential for an immersive gaming experience. The best gaming headphones provide crystal-clear audio, comfortable fit for long sessions, and features that give you a competitive edge.
+                    Finding the right headphones for studying can make a significant difference in your focus and productivity. The best study headphones provide excellent noise isolation, long-lasting comfort, and audio quality that enhances rather than distracts from your learning.
                 </p>
                 
                 <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
-                    We've tested gaming headphones across different platforms to find options that deliver exceptional sound quality, reliable microphone performance, and comfort that lasts through marathon gaming sessions.
+                    We've tested headphones specifically for studying scenarios to find options that help you maintain concentration during long study sessions, whether you're in a noisy library, shared living space, or need background music to focus.
                 </p>
             </div>
 
             <!-- Top Picks -->
             <div class="mb-12">
                 <h2 class="font-heading font-bold text-2xl sm:text-3xl mb-8 text-center">
-                    Our Top Gaming Headphones
+                    Our Top Study Headphones
                 </h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -125,18 +131,18 @@
                             <div class="mb-4">
                                 <img src="/public/favicon.svg" alt="Headphones Icon" class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto">
                             </div>
-                            <h3 class="font-heading font-semibold text-xl mb-2">SteelSeries Arctis Pro</h3>
-                            <p class="text-2xl font-bold text-secondary mb-2">$179</p>
+                            <h3 class="font-heading font-semibold text-xl mb-2">Sony WH-1000XM4</h3>
+                            <p class="text-2xl font-bold text-secondary mb-2">$299</p>
                         </div>
                         
                         <div class="space-y-3 mb-6">
                             <div class="flex items-center">
                                 <span class="text-green-500 mr-2">✓</span>
-                                <span class="text-sm">Premium audio quality</span>
+                                <span class="text-sm">Excellent noise cancellation</span>
                             </div>
                             <div class="flex items-center">
                                 <span class="text-green-500 mr-2">✓</span>
-                                <span class="text-sm">Clear microphone</span>
+                                <span class="text-sm">30+ hour battery life</span>
                             </div>
                             <div class="flex items-center">
                                 <span class="text-green-500 mr-2">✓</span>
@@ -144,11 +150,11 @@
                             </div>
                             <div class="flex items-center">
                                 <span class="text-red-500 mr-2">✗</span>
-                                <span class="text-sm">Premium price</span>
+                                <span class="text-sm">Premium price point</span>
                             </div>
                         </div>
                         
-                        <a href="https://www.amazon.com/s?k=SteelSeries+Arctis+Pro+headphones&linkCode=ll2&tag=ngp0ba-20" class="btn-product" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.amazon.com/s?k=Sony+WH-1000XM4+headphones&linkCode=ll2&tag=ngp0ba-20" class="btn-product" target="_blank" rel="noopener noreferrer">
                             Check Price
                         </a>
                     </div>
@@ -159,30 +165,30 @@
                             <div class="mb-4">
                                 <img src="/public/favicon.svg" alt="Headphones Icon" class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto">
                             </div>
-                            <h3 class="font-heading font-semibold text-xl mb-2">HyperX Cloud Alpha</h3>
-                            <p class="text-2xl font-bold text-secondary mb-2">$99</p>
+                            <h3 class="font-heading font-semibold text-xl mb-2">Bose QuietComfort 35 II</h3>
+                            <p class="text-2xl font-bold text-secondary mb-2">$269</p>
                         </div>
                         
                         <div class="space-y-3 mb-6">
                             <div class="flex items-center">
                                 <span class="text-green-500 mr-2">✓</span>
-                                <span class="text-sm">Great value for money</span>
+                                <span class="text-sm">Superior comfort</span>
                             </div>
                             <div class="flex items-center">
                                 <span class="text-green-500 mr-2">✓</span>
-                                <span class="text-sm">Durable build quality</span>
+                                <span class="text-sm">20+ hour battery life</span>
                             </div>
                             <div class="flex items-center">
                                 <span class="text-green-500 mr-2">✓</span>
-                                <span class="text-sm">Good sound isolation</span>
+                                <span class="text-sm">Great noise isolation</span>
                             </div>
                             <div class="flex items-center">
                                 <span class="text-red-500 mr-2">✗</span>
-                                <span class="text-sm">Wired only</span>
+                                <span class="text-sm">Older design</span>
                             </div>
                         </div>
                         
-                        <a href="https://www.amazon.com/s?k=HyperX+Cloud+Alpha+headphones&linkCode=ll2&tag=ngp0ba-20" class="btn-product" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.amazon.com/s?k=Bose+QuietComfort+35+II+headphones&linkCode=ll2&tag=ngp0ba-20" class="btn-product" target="_blank" rel="noopener noreferrer">
                             Check Price
                         </a>
                     </div>
@@ -193,30 +199,30 @@
                             <div class="mb-4">
                                 <img src="/public/favicon.svg" alt="Headphones Icon" class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto">
                             </div>
-                            <h3 class="font-heading font-semibold text-xl mb-2">Razer BlackShark V2</h3>
-                            <p class="text-2xl font-bold text-secondary mb-2">$79</p>
+                            <h3 class="font-heading font-semibold text-xl mb-2">Audio-Technica ATH-M50x</h3>
+                            <p class="text-2xl font-bold text-secondary mb-2">$149</p>
                         </div>
                         
                         <div class="space-y-3 mb-6">
                             <div class="flex items-center">
                                 <span class="text-green-500 mr-2">✓</span>
-                                <span class="text-sm">Lightweight design</span>
+                                <span class="text-sm">Studio-quality sound</span>
                             </div>
                             <div class="flex items-center">
                                 <span class="text-green-500 mr-2">✓</span>
-                                <span class="text-sm">Excellent microphone</span>
+                                <span class="text-sm">Foldable design</span>
                             </div>
                             <div class="flex items-center">
                                 <span class="text-green-500 mr-2">✓</span>
-                                <span class="text-sm">Affordable price</span>
+                                <span class="text-sm">Great value</span>
                             </div>
                             <div class="flex items-center">
                                 <span class="text-red-500 mr-2">✗</span>
-                                <span class="text-sm">Limited features</span>
+                                <span class="text-sm">Wired only</span>
                             </div>
                         </div>
                         
-                        <a href="https://www.amazon.com/s?k=Razer+BlackShark+V2+headphones&linkCode=ll2&tag=ngp0ba-20" class="btn-product" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.amazon.com/s?k=Audio-Technica+ATH-M50x+headphones&linkCode=ll2&tag=ngp0ba-20" class="btn-product" target="_blank" rel="noopener noreferrer">
                             Check Price
                         </a>
                     </div>
@@ -225,13 +231,13 @@
 
             <!-- Additional Content -->
             <div class="prose prose-lg dark:prose-invert max-w-none">
-                <h2>What Makes Great Gaming Headphones?</h2>
-                <p>When choosing gaming headphones, consider these key factors:</p>
+                <h2>What Makes Great Study Headphones?</h2>
+                <p>When choosing headphones for studying, consider these key factors:</p>
                 <ul>
-                    <li><strong>Sound Quality:</strong> Clear audio for immersive gaming experience</li>
-                    <li><strong>Microphone:</strong> Clear voice communication with teammates</li>
-                    <li><strong>Comfort:</strong> Comfortable for extended gaming sessions</li>
-                    <li><strong>Compatibility:</strong> Works with your gaming platform (PC, PS5, Xbox)</li>
+                    <li><strong>Noise Isolation:</strong> Blocks out distracting background noise</li>
+                    <li><strong>Comfort:</strong> Comfortable for extended wear during long study sessions</li>
+                    <li><strong>Sound Quality:</strong> Clear audio that doesn't fatigue your ears</li>
+                    <li><strong>Battery Life:</strong> Long-lasting power for uninterrupted study sessions</li>
                 </ul>
             </div>
         </div>
@@ -240,3 +246,6 @@
     <script src="/src/js/main.js"></script>
 </body>
 </html>
+EOF
+
+echo "✅ Studying page fixed!" 
