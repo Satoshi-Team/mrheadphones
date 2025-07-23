@@ -1,6 +1,7 @@
 // Dark mode functionality
 function initDarkMode() {
   const darkModeToggle = document.getElementById('darkModeToggle');
+  const mobileDarkModeToggle = document.getElementById('mobileDarkModeToggle');
   const html = document.documentElement;
   
   // Check for saved theme preference or default to light mode
@@ -11,63 +12,30 @@ function initDarkMode() {
   
   // Function to toggle dark mode
   function toggleDarkMode() {
-    html.classList.toggle('dark');
-    const isDark = html.classList.contains('dark');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      html.classList.toggle('dark');
+      const isDark = html.classList.contains('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
   }
   
   // Desktop dark mode toggle
   if (darkModeToggle) {
     darkModeToggle.addEventListener('click', toggleDarkMode);
   }
+  
+  // Mobile dark mode toggle with emoji
+  if (mobileDarkModeToggle) {
+    mobileDarkModeToggle.addEventListener('click', toggleDarkMode);
+  }
 }
 
-// Mobile menu functionality - Perfect uniformity across all devices
+// Mobile menu functionality
 function initMobileMenu() {
   const mobileMenuButton = document.getElementById('mobileMenuButton');
   const mobileMenu = document.getElementById('mobileMenu');
   
   if (mobileMenuButton && mobileMenu) {
-    // Always ensure mobile menu starts hidden
-    mobileMenu.classList.add('hidden');
-    
-    // Remove any conflicting classes
-    mobileMenu.classList.remove('block', 'flex', 'grid');
-    
-    mobileMenuButton.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      
-      // Toggle the hidden class only
+    mobileMenuButton.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
-      
-      // Ensure no other display classes interfere
-      if (!mobileMenu.classList.contains('hidden')) {
-        mobileMenu.classList.remove('block', 'flex', 'grid');
-      }
-      
-      console.log('Mobile menu toggled:', mobileMenu.classList.contains('hidden') ? 'hidden' : 'visible');
-    });
-    
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
-        mobileMenu.classList.add('hidden');
-      }
-    });
-    
-    // Close menu on escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        mobileMenu.classList.add('hidden');
-      }
-    });
-    
-    // Close menu when window is resized to desktop
-    window.addEventListener('resize', () => {
-      if (window.innerWidth >= 1024) { // lg breakpoint
-        mobileMenu.classList.add('hidden');
-      }
     });
   }
 }
@@ -200,7 +168,6 @@ function initCTATracking() {
 
 // Initialize all functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('Initializing MrHeadphones with uniform header...');
   initDarkMode();
   initMobileMenu();
   initSmoothScroll();
@@ -208,5 +175,4 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollTracking();
   initContactForm();
   initCTATracking();
-  console.log('MrHeadphones uniform header initialized successfully!');
-});
+}); 
