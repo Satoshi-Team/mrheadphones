@@ -19,84 +19,57 @@
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white dark-mode-transition">
     <!-- Navigation -->
+
+    <!-- Navigation -->
     <nav class="fixed top-0 w-full glass-effect z-50 border-b border-gray-200/30 dark:border-gray-700/30 backdrop-blur-2xl shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="content-container-wide">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <div class="flex items-center">
                     <a href="/" class="flex items-center space-x-3 group">
-                        <img src="../../../public/favicon.svg?v=1.0.1" alt="MrHeadphones Logo" class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 transition-all duration-300 group-hover:scale-105">
+                        <img src="/public/favicon.svg?v=1.0.1" alt="MrHeadphones Logo" class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 transition-all duration-300 group-hover:scale-105">
                         <span class="font-heading font-bold text-lg sm:text-xl lg:text-2xl text-gray-900 dark:text-white">MrHeadphones</span>
                     </a>
                 </div>
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="/#home" class="nav-link">Home</a>
-                    <a href="/#categories" class="nav-link">Categories</a>
-                    <a href="/#devices" class="nav-link">Devices</a>
-                    <a href="/#solutions" class="nav-link">Solutions</a>
-                    <a href="/#budget" class="nav-link">Budget</a>
+                    <a href="/#home" class="nav-link" data-translate="nav_home">Home</a>
+                    <a href="/#categories" class="nav-link" data-translate="nav_categories">Categories</a>
+                    <a href="/#devices" class="nav-link" data-translate="nav_devices">Devices</a>
+                    <a href="/#solutions" class="nav-link" data-translate="nav_solutions">Solutions</a>
+                    <a href="/#budget" class="nav-link" data-translate="nav_budget">Budget</a>
                 </div>
                 
                 <!-- Right Side Controls -->
                 <div class="flex items-center space-x-2">
                     <!-- Dark Mode Toggle -->
-                                <button id="darkModeToggle" aria-label="Toggle dark mode" aria-label="Toggle dark mode" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
-                                        <span class="dark:hidden">
-                                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
-                                                </svg>
-                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
-                                                </svg>
-                                        </span>
-                                        <span class="hidden dark:inline">
-                                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/>
-                                                </svg>
-                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/>
-                                                </svg>
-                                        </span>
-                </a>
-                
-                <!-- Mobile Menu Button -->
-                                <button id="mobileMenuButton" aria-label="Toggle mobile menu" aria-label="Toggle mobile menu" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                                            <svg class="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
-                                            </svg>
-                </a>
-                </div>
-                    </a>
+                    <button id="darkModeToggle" aria-label="Toggle dark mode" data-translate-title="dark_mode_toggle" class="p-3 rounded-2xl hover:bg-gray-100/60 dark:hover:bg-gray-700/60 transition-all duration-300 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-secondary/30">
+                        <span class="dark:hidden">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+                            </svg>
+                        </span>
+                        <span class="hidden dark:inline">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/>
+                            </svg>
+                        </span>
+                    </button>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuButton" aria-label="Toggle mobile menu" data-translate-title="mobile_menu_toggle" class="md:hidden p-3 rounded-2xl hover:bg-gray-100/60 dark:hover:bg-gray-700/60 transition-all duration-300 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-secondary/30">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
         
-                <a href="/#categories" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">Categories</a>
-                <a href="/#devices" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">Devices</a>
-                <a href="/#solutions" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">Solutions</a>
-                <a href="/#budget" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">Budget</a>
-            </div>
-                <a href="/#home" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700" data-translate="nav_home">Home</a>
-                <a href="/#home" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700" data-translate="nav_home">Home</a>
-                <a href="/#categories" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700" data-translate="nav_categories">Categories</a>
-                <a href="/#devices" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700" data-translate="nav_devices">Devices</a>
-                <a href="/#solutions" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700" data-translate="nav_solutions">Solutions</a>
-                <a href="/#budget" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700" data-translate="nav_budget">Budget</a>
-            </div>
-        </div>
-        </div>
-            <!-- Mobile Menu -->
+        <!-- Mobile Menu -->
         <div id="mobileMenu" class="hidden md:hidden mobile-futuristic border-t border-gray-200/20 dark:border-gray-700/20">
             <div class="px-4 py-4 space-y-2">
-                <a href="/#home" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700" data-translate="nav_home">Home</a>
-                <a href="/#home" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700" data-translate="nav_home">Home</a>
-                <a href="/#categories" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700" data-translate="nav_categories">Categories</a>
-                <a href="/#devices" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700" data-translate="nav_devices">Devices</a>
-                <a href="/#solutions" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700" data-translate="nav_solutions">Solutions</a>
-                <a href="/#budget" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700" data-translate="nav_budget">Budget</a>
-            </div>
-        </div>
-        <div id="mobileMenu" class="hidden md:hidden mobile-futuristic border-t border-gray-200/20 dark:border-gray-700/20">
                 <a href="/#home" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700" data-translate="nav_home">Home</a>
                 <a href="/#categories" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700" data-translate="nav_categories">Categories</a>
                 <a href="/#devices" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700" data-translate="nav_devices">Devices</a>
@@ -115,7 +88,6 @@
             <p class="text-lg sm:text-xl mb-8 text-gray-200 max-w-3xl mx-auto">
                 Quality noise cancellation doesn't have to cost a fortune. Discover the best ANC headphones under $200 that deliver impressive performance without the premium price tag.
             </p>
-        </div>
     </section>
 
     <!-- Content Section -->
@@ -130,7 +102,6 @@
                 <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
                     We've tested budget-friendly ANC headphones to find options that deliver solid noise cancellation, good sound quality, and reliable performance. These picks prove that you can get excellent value without compromising on essential features.
                 </p>
-            </div>
 
             <!-- Top Picks -->
             <div class="mb-12">
@@ -144,104 +115,75 @@
                         <div class="text-center mb-4">
                             <div class="mb-4">
                                 <img src="/public/favicon.svg" alt="Headphones Icon" class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto">
-                            </div>
                             <h3 class="font-heading font-semibold text-xl mb-2">Anker Soundcore Life Q30</h3>
                             <p class="text-2xl font-bold text-secondary mb-2">$79</p>
-                        </div>
                         
                         <div class="space-y-3 mb-6">
                             <div class="flex items-center">
                                 <span class="text-green-500 mr-2">✓</span>
                                 <span class="text-sm">Excellent value for money</span>
-                            </div>
                             <div class="flex items-center">
                                 <span class="text-green-500 mr-2">✓</span>
                                 <span class="text-sm">40+ hour battery life</span>
-                            </div>
                             <div class="flex items-center">
                                 <span class="text-green-500 mr-2">✓</span>
                                 <span class="text-sm">Good ANC performance</span>
-                            </div>
                             <div class="flex items-center">
                                 <span class="text-red-500 mr-2">✗</span>
                                 <span class="text-sm">Plastic build quality</span>
-                            </div>
-                        </div>
                         
                         <a href="#" class="btn-product">
                             Check Price
-                        </a>
-                    </div>
 
                     <!-- Product Card 2 -->
                     <div class="card-hover">
                         <div class="text-center mb-4">
                             <div class="mb-4">
                                 <img src="/public/favicon.svg" alt="Headphones Icon" class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto">
-                            </div>
                             <h3 class="font-heading font-semibold text-xl mb-2">Sony WH-CH710N</h3>
                             <p class="text-2xl font-bold text-secondary mb-2">$149</p>
-                        </div>
                         
                         <div class="space-y-3 mb-6">
                             <div class="flex items-center">
                                 <span class="text-green-500 mr-2">✓</span>
                                 <span class="text-sm">Sony quality at budget price</span>
-                            </div>
                             <div class="flex items-center">
                                 <span class="text-green-500 mr-2">✓</span>
                                 <span class="text-sm">35+ hour battery life</span>
-                            </div>
                             <div class="flex items-center">
                                 <span class="text-green-500 mr-2">✓</span>
                                 <span class="text-sm">Comfortable fit</span>
-                            </div>
                             <div class="flex items-center">
                                 <span class="text-red-500 mr-2">✗</span>
                                 <span class="text-sm">Basic ANC performance</span>
-                            </div>
-                        </div>
                         
                         <a href="#" class="btn-product">
                             Check Price
-                        </a>
-                    </div>
 
                     <!-- Product Card 3 -->
                     <div class="card-hover">
                         <div class="text-center mb-4">
                             <div class="mb-4">
                                 <img src="/public/favicon.svg" alt="Headphones Icon" class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto">
-                            </div>
                             <h3 class="font-heading font-semibold text-xl mb-2">JBL Live 650BTNC</h3>
                             <p class="text-2xl font-bold text-secondary mb-2">$199</p>
-                        </div>
                         
                         <div class="space-y-3 mb-6">
                             <div class="flex items-center">
                                 <span class="text-green-500 mr-2">✓</span>
                                 <span class="text-sm">JBL signature sound</span>
-                            </div>
                             <div class="flex items-center">
                                 <span class="text-green-500 mr-2">✓</span>
                                 <span class="text-sm">30+ hour battery life</span>
-                            </div>
                             <div class="flex items-center">
                                 <span class="text-green-500 mr-2">✓</span>
                                 <span class="text-sm">Foldable design</span>
-                            </div>
                             <div class="flex items-center">
                                 <span class="text-red-500 mr-2">✗</span>
                                 <span class="text-sm">Heavier than competitors</span>
-                            </div>
-                        </div>
                         
                         <a href="#" class="btn-product">
                             Check Price
-                        </a>
-                    </div>
-                </div>
-            </div>
 
             <!-- Budget ANC Features Section -->
             <div class="mb-12">
@@ -255,30 +197,24 @@
                         <p class="text-gray-600 dark:text-gray-300">
                             Budget ANC headphones typically reduce low-frequency noise by 70-85%, compared to 90%+ in premium models. Still very effective for most environments.
                         </p>
-                    </div>
                     
                     <div class="card-hover">
                         <h3 class="font-heading font-semibold text-lg mb-3">Build Quality</h3>
                         <p class="text-gray-600 dark:text-gray-300">
                             Expect mostly plastic construction with some metal accents. While not as premium as $300+ models, they're still durable for daily use.
                         </p>
-                    </div>
                     
                     <div class="card-hover">
                         <h3 class="font-heading font-semibold text-lg mb-3">Battery Life</h3>
                         <p class="text-gray-600 dark:text-gray-300">
                             Most budget ANC headphones offer 20-40 hours of battery life, which is often comparable to or better than premium options.
                         </p>
-                    </div>
                     
                     <div class="card-hover">
                         <h3 class="font-heading font-semibold text-lg mb-3">Sound Quality</h3>
                         <p class="text-gray-600 dark:text-gray-300">
                             Sound quality is generally good, though you may notice less detail and refinement compared to premium models. Still enjoyable for most music genres.
                         </p>
-                    </div>
-                </div>
-            </div>
 
             <!-- FAQ Section -->
             <div class="mb-12">
@@ -292,23 +228,18 @@
                         <p class="text-gray-600 dark:text-gray-300">
                             Absolutely! While not as powerful as premium models, budget ANC headphones still provide significant noise reduction that can dramatically improve your listening experience.
                         </p>
-                    </div>
                     
                     <div class="card-hover">
                         <h3 class="font-heading font-semibold text-lg mb-3">How much ANC performance do I lose?</h3>
                         <p class="text-gray-600 dark:text-gray-300">
                             You typically lose 10-15% of ANC effectiveness compared to premium models, but this is still very effective for most everyday situations like commuting and office work.
                         </p>
-                    </div>
                     
                     <div class="card-hover">
                         <h3 class="font-heading font-semibold text-lg mb-3">Should I save up for premium ANC?</h3>
                         <p class="text-gray-600 dark:text-gray-300">
                             If you're on a budget, start with a good $200 option. You can always upgrade later, and many users find budget ANC headphones meet their needs perfectly.
                         </p>
-                    </div>
-                </div>
-            </div>
 
             <!-- Related Articles -->
             <div class="mb-12">
@@ -320,15 +251,10 @@
                     <a href="../best-noise-cancelling-headphones.html" class="card hover:scale-105 transition-transform">
                         <h3 class="font-heading font-semibold text-lg mb-2">Best Noise-Cancelling Headphones</h3>
                         <p class="text-gray-600 dark:text-gray-300">Complete guide to ANC technology.</p>
-                    </a>
                     
                     <a href="../best-headphones-under-100.html" class="card hover:scale-105 transition-transform">
                         <h3 class="font-heading font-semibold text-lg mb-2">Best Headphones Under $100</h3>
                         <p class="text-gray-600 dark:text-gray-300">Ultra-budget audio solutions.</p>
-                    </a>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- Footer -->
@@ -339,11 +265,9 @@
                     <div class="flex items-center space-x-2 mb-4">
                         <img src="../../../public/favicon.svg?v=1.0.1" alt="MrHeadphones Logo" class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 transition-all duration-300 group-hover:scale-105">
                         <span class="font-heading font-bold text-base sm:text-lg">MrHeadphones</span>
-                    </div>
                     <p class="text-gray-300 mb-4">
                         MrHeadphones.com is a user-first headphone discovery platform that helps you find the right pair based on real-world testing, expert research, and audio performance for every need.
                     </p>
-                </div>
                 
                 <div>
                     <h3 class="font-heading font-semibold text-lg mb-4">Quick Links</h3>
@@ -353,7 +277,6 @@
                         <li><a href="/#devices" class="text-gray-300 hover:text-white transition-colors">Devices</a></li>
                         <li><a href="/#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
                     </ul>
-                </div>
                 
                 <div>
                     <h3 class="font-heading font-semibold text-lg mb-4">Connect</h3>
@@ -363,15 +286,11 @@
                         <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Privacy</a></li>
                         <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Terms</a></li>
                     </ul>
-                </div>
-            </div>
             
             <div class="border-t border-gray-700 mt-8 pt-8 text-center">
                 <p class="text-gray-300">
                     © 2025 MrHeadphones.com. All rights reserved.
                 </p>
-            </div>
-        </div>
     </footer>
 
     <!-- JavaScript -->
