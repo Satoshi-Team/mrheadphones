@@ -22,23 +22,30 @@ function initDarkMode() {
   }
 }
 
-// Mobile menu functionality - Enhanced for better device compatibility
+// Mobile menu functionality - Perfect uniformity across all devices
 function initMobileMenu() {
   const mobileMenuButton = document.getElementById('mobileMenuButton');
   const mobileMenu = document.getElementById('mobileMenu');
   
   if (mobileMenuButton && mobileMenu) {
-    // Ensure mobile menu starts hidden
+    // Always ensure mobile menu starts hidden
     mobileMenu.classList.add('hidden');
+    
+    // Remove any conflicting classes
+    mobileMenu.classList.remove('block', 'flex', 'grid');
     
     mobileMenuButton.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
       
-      // Toggle the hidden class
+      // Toggle the hidden class only
       mobileMenu.classList.toggle('hidden');
       
-      // Add some debugging
+      // Ensure no other display classes interfere
+      if (!mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.remove('block', 'flex', 'grid');
+      }
+      
       console.log('Mobile menu toggled:', mobileMenu.classList.contains('hidden') ? 'hidden' : 'visible');
     });
     
@@ -52,6 +59,13 @@ function initMobileMenu() {
     // Close menu on escape key
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+    
+    // Close menu when window is resized to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1024) { // lg breakpoint
         mobileMenu.classList.add('hidden');
       }
     });
@@ -186,7 +200,7 @@ function initCTATracking() {
 
 // Initialize all functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('Initializing MrHeadphones functionality...');
+  console.log('Initializing MrHeadphones with uniform header...');
   initDarkMode();
   initMobileMenu();
   initSmoothScroll();
@@ -194,5 +208,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollTracking();
   initContactForm();
   initCTATracking();
-  console.log('MrHeadphones functionality initialized successfully!');
+  console.log('MrHeadphones uniform header initialized successfully!');
 });
