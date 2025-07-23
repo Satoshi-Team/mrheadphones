@@ -1,7 +1,6 @@
 // Dark mode functionality
 function initDarkMode() {
   const darkModeToggle = document.getElementById('darkModeToggle');
-  const mobileDarkModeToggle = document.getElementById('mobileDarkModeToggle');
   const html = document.documentElement;
   
   // Check for saved theme preference or default to light mode
@@ -21,21 +20,40 @@ function initDarkMode() {
   if (darkModeToggle) {
     darkModeToggle.addEventListener('click', toggleDarkMode);
   }
-  
-  // Mobile dark mode toggle with emoji
-  if (mobileDarkModeToggle) {
-    mobileDarkModeToggle.addEventListener('click', toggleDarkMode);
-  }
 }
 
-// Mobile menu functionality
+// Mobile menu functionality - Enhanced for better device compatibility
 function initMobileMenu() {
   const mobileMenuButton = document.getElementById('mobileMenuButton');
   const mobileMenu = document.getElementById('mobileMenu');
   
   if (mobileMenuButton && mobileMenu) {
-    mobileMenuButton.addEventListener('click', () => {
+    // Ensure mobile menu starts hidden
+    mobileMenu.classList.add('hidden');
+    
+    mobileMenuButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      // Toggle the hidden class
       mobileMenu.classList.toggle('hidden');
+      
+      // Add some debugging
+      console.log('Mobile menu toggled:', mobileMenu.classList.contains('hidden') ? 'hidden' : 'visible');
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+    
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        mobileMenu.classList.add('hidden');
+      }
     });
   }
 }
@@ -168,6 +186,7 @@ function initCTATracking() {
 
 // Initialize all functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('Initializing MrHeadphones functionality...');
   initDarkMode();
   initMobileMenu();
   initSmoothScroll();
@@ -175,4 +194,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollTracking();
   initContactForm();
   initCTATracking();
-}); 
+  console.log('MrHeadphones functionality initialized successfully!');
+});
