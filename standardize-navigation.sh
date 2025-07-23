@@ -1,21 +1,9 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Over-Ear Headphones Under $100 (2025) - Top Budget Picks | MrHeadphones.com</title>
-    <meta name="description" content="Find the best over-ear headphones under $100. Expert reviews of budget-friendly options with great sound quality, comfort, and features. Save money without sacrificing audio performance.">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- TailwindCSS -->
-    <link href="../../../dist/output.css?v=1.0.1" rel="stylesheet">
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="../../../public/favicon.svg?v=1.0.1">
-</head>
-<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white dark-mode-transition">
-    <!-- Navigation -->
+#!/bin/bash
+
+echo "🔧 Standardizing navigation across all HTML pages..."
+
+# Perfect navigation template from PS5 page
+PERFECT_NAV='    <!-- Navigation -->
     <nav class="fixed top-0 w-full glass-effect z-50 border-b border-gray-200/30 dark:border-gray-700/30 backdrop-blur-2xl shadow-lg">
         <div class="content-container-wide">
             <div class="flex justify-between items-center h-16">
@@ -72,4 +60,54 @@
                 <a href="/#budget" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700" data-translate="nav_budget">Budget</a>
             </div>
         </div>
-    </nav>
+    </nav>'
+
+# Function to replace navigation in a file
+replace_navigation() {
+    local file="$1"
+    echo "Processing: $file"
+    
+    # Create a temporary file
+    temp_file=$(mktemp)
+    
+    # Use awk to replace the navigation section
+    awk -v nav="$PERFECT_NAV" '
+    BEGIN { in_nav = 0; nav_replaced = 0 }
+    /<!-- Navigation -->/ { 
+        in_nav = 1
+        if (!nav_replaced) {
+            print nav
+            nav_replaced = 1
+        }
+        next
+    }
+    /<nav class=/ { 
+        in_nav = 1
+        if (!nav_replaced) {
+            print nav
+            nav_replaced = 1
+        }
+        next
+    }
+    /<\/nav>/ { 
+        in_nav = 0
+        next
+    }
+    in_nav { next }
+    { print }
+    ' "$file" > "$temp_file"
+    
+    # Replace the original file
+    mv "$temp_file" "$file"
+}
+
+# Find all HTML files and process them
+find . -name "*.html" -type f | while read -r file; do
+    # Skip backup files
+    if [[ "$file" != *".backup"* ]]; then
+        replace_navigation "$file"
+    fi
+done
+
+echo "✅ Navigation standardized across all HTML pages!"
+echo "🎉 All pages now use the perfect navigation structure from the PS5 page" 

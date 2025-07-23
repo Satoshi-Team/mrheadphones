@@ -1,21 +1,17 @@
 #!/bin/bash
 
-echo "🔧 Fixing navigation structure issues..."
+echo "🔧 Fixing navigation structure to match PS5 page exactly..."
 
 # Function to fix navigation structure
 fix_navigation() {
     local file="$1"
-    echo "Fixing navigation in: $file"
+    echo "Processing: $file"
     
-    # Create a backup
-    cp "$file" "${file}.backup2"
+    # Create a temporary file
+    temp_file=$(mktemp)
     
-    # First, let's find where the navigation section starts and ends
-    # Remove everything from the nav opening to the nav closing
-    sed -i '/<nav class="fixed top-0/,/<\/nav>/d' "$file"
-    
-    # Insert the correct navigation structure before the hero section
-    sed -i '/<!-- Hero Section -->/i\
+    # Use sed to replace the entire navigation section with the correct structure
+    sed '/<!-- Navigation -->/,/<\/nav>/c\
     <!-- Navigation -->\
     <nav class="fixed top-0 w-full glass-effect z-50 border-b border-gray-200/30 dark:border-gray-700/30 backdrop-blur-2xl shadow-lg">\
         <div class="content-container-wide">\
@@ -73,24 +69,18 @@ fix_navigation() {
                 <a href="/#budget" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700" data-translate="nav_budget">Budget</a>\
             </div>\
         </div>\
-    </nav>\
-' "$file"
+    </nav>' "$file" > "$temp_file"
     
-    echo "✅ Fixed navigation in: $file"
+    # Replace the original file
+    mv "$temp_file" "$file"
 }
 
-# Fix all category pages
-for dir in categories/*/; do
-    if [ -f "${dir}index.html" ]; then
-        fix_navigation "${dir}index.html"
-    fi
-done
-
-# Also fix any pages in src/pages/categories/
-for file in src/pages/categories/*.html; do
-    if [ -f "$file" ]; then
+# Find all HTML files and process them
+find . -name "*.html" -type f | while read -r file; do
+    # Skip backup files
+    if [[ "$file" != *".backup"* ]]; then
         fix_navigation "$file"
     fi
 done
 
-echo "🎉 Navigation structure fixes completed!" 
+echo "✅ Navigation structure fixed across all HTML pages!" 
