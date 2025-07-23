@@ -1,14 +1,9 @@
 #!/bin/bash
 
-echo "🔧 Fixing desktop navigation layout..."
+echo "🔧 Fixing main index.html navigation layout..."
 
-# Function to fix navigation in a file
-fix_navigation() {
-    local file="$1"
-    echo "Fixing navigation in: $file"
-    
-    # Replace the entire navigation section with improved layout
-    sed -i '/<!-- Navigation -->/,/<!-- Mobile Menu -->/c\
+# Fix navigation in the main index.html
+sed -i '/<!-- Navigation -->/,/<!-- Mobile Menu -->/c\
     <!-- Navigation -->\
     <nav class="bg-white dark:bg-gray-900 shadow-lg sticky top-0 z-50 transition-colors duration-300">\
         <div class="content-container-wide">\
@@ -66,20 +61,6 @@ fix_navigation() {
                 </div>\
             </div>\
         </div>\
-    </nav>' "$file"
-}
+    </nav>' index.html
 
-# Fix navigation in the studying page
-fix_navigation "categories/best-headphones-for-studying/index.html"
-
-# Fix navigation in the gaming page
-fix_navigation "categories/best-headphones-for-gaming/index.html"
-
-# Fix navigation in the under-100 page (if it needs updating)
-fix_navigation "categories/best-headphones-under-100/index.html"
-
-echo "✅ Navigation layout fixed!"
-echo "   - Centered navigation links between logo and controls"
-echo "   - Added Solutions and Budget links"
-echo "   - Improved dark mode toggle styling"
-echo "   - Better spacing and responsive design" 
+echo "✅ Main index.html navigation layout fixed!" 
