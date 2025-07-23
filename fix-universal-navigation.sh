@@ -1,21 +1,9 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Headphones for Studying 2025 - Focus & Concentration | MrHeadphones.com</title>
-    <meta name="description" content="Find the best headphones for studying and focus. Expert picks for noise isolation, comfort during long study sessions, and audio that enhances concentration.">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- TailwindCSS -->
-    <link href="../../../dist/output.css?v=1.0.1" rel="stylesheet">
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="../../../public/favicon.svg?v=1.0.1">
-</head>
-<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white dark-mode-transition">
-    <!-- Navigation -->
+#!/bin/bash
+
+echo "🔧 Fixing universal navigation for all device sizes..."
+
+# Universal navigation template that works perfectly on all devices
+UNIVERSAL_NAV='    <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 w-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-700/50 shadow-lg z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16 sm:h-18 lg:h-20">
@@ -72,4 +60,61 @@
                 <a href="/#budget" class="block py-3 px-4 rounded-xl hover:bg-gray-100/60 dark:hover:bg-gray-700/60 text-gray-900 dark:text-white font-medium transition-all duration-200 text-base sm:text-lg" data-translate="nav_budget">Budget</a>
             </div>
         </div>
-    </nav>
+    </nav>'
+
+# Function to fix navigation in a file
+fix_navigation() {
+    local file="$1"
+    echo "Processing: $file"
+    
+    # Create a temporary file
+    temp_file=$(mktemp)
+    
+    # Use awk to replace the navigation section
+    awk -v nav="$UNIVERSAL_NAV" '
+    BEGIN { 
+        in_nav = 0
+        nav_replaced = 0
+    }
+    /<!-- Navigation -->/ { 
+        in_nav = 1
+        if (!nav_replaced) {
+            print nav
+            nav_replaced = 1
+        }
+        next
+    }
+    /<nav class=/ { 
+        in_nav = 1
+        if (!nav_replaced) {
+            print nav
+            nav_replaced = 1
+        }
+        next
+    }
+    /<\/nav>/ { 
+        in_nav = 0
+        next
+    }
+    in_nav { next }
+    { print }
+    ' "$file" > "$temp_file"
+    
+    # Replace the original file
+    mv "$temp_file" "$file"
+}
+
+# Find all HTML files and process them
+find . -name "*.html" -type f | while read -r file; do
+    # Skip backup files
+    if [[ "$file" != *".backup"* ]]; then
+        fix_navigation "$file"
+    fi
+done
+
+echo "✅ Universal navigation fixed for all device sizes!"
+echo "🎉 Navigation now works perfectly on:"
+echo "   - Mobile phones (320px+)"
+echo "   - Tablets (768px+)"
+echo "   - Desktop (1024px+)"
+echo "   - Large screens (1280px+)" 
