@@ -127,7 +127,7 @@
   }
 
   .related-article-btn {
-    @apply bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:border-secondary dark:hover:border-secondary hover:transform hover:-translate-y-1 text-left group;
+    @apply bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:border-secondary dark:hover:border-secondary hover:transform hover:-translate-y-1 text-left;
   }
 
   .related-article-btn:hover {
