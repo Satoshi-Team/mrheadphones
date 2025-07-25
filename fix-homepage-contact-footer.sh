@@ -1,0 +1,601 @@
+#!/bin/bash
+
+echo "🔧 Adding contact section with web3forms API and improving footer..."
+
+# Create the enhanced homepage with contact section
+cat > index.html << 'EOF'
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MrHeadphones.com - The Internet's Ultimate Headphones Resource</title>
+    <meta name="description" content="Find the best headphones for every use case - from gaming to meditation to professional audio production. Expert reviews and recommendations.">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- TailwindCSS -->
+    <link href="/dist/output.css?v=1.0.3" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/public/favicon.svg">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-89QWFC1J9M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-89QWFC1J9M');
+    </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white dark-mode-transition">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 w-full bg-white dark:bg-gray-900 backdrop-blur-xl border-b border-gray-200 dark:border-gray-700 shadow-lg z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-18 lg:h-20">
+                <!-- Logo -->
+                <div class="flex items-center flex-shrink-0">
+                    <a href="/" class="flex items-center space-x-2 sm:space-x-3 group">
+                        <img src="/public/favicon.svg?v=1.0.1" alt="MrHeadphones Logo" class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 transition-all duration-300 group-hover:scale-105">
+                        <span class="font-heading font-bold text-base sm:text-lg lg:text-xl xl:text-2xl text-gray-900 dark:text-white">MrHeadphones</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation - Hidden on mobile -->
+                <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
+                    <a href="/#home" class="nav-link text-sm xl:text-base" data-translate="nav_home">Home</a>
+                    <a href="/#categories" class="nav-link text-sm xl:text-base" data-translate="nav_categories">Categories</a>
+                    <a href="/#devices" class="nav-link text-sm xl:text-base" data-translate="nav_devices">Devices</a>
+                    <a href="/#solutions" class="nav-link text-sm xl:text-base" data-translate="nav_solutions">Solutions</a>
+                    <a href="/#budget" class="nav-link text-sm xl:text-base" data-translate="nav_budget">Budget</a>
+                    <a href="/#contact" class="nav-link text-sm xl:text-base" data-translate="nav_contact">Contact</a>
+                </div>
+                
+                <!-- Right Side Controls -->
+                <div class="flex items-center space-x-2 sm:space-x-3">
+                    <!-- Dark Mode Toggle -->
+                    <button id="darkModeToggle" aria-label="Toggle dark mode" data-translate-title="dark_mode_toggle" class="p-2 sm:p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-secondary/30">
+                        <span class="dark:hidden">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+                            </svg>
+                        </span>
+                        <span class="hidden dark:inline">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/>
+                            </svg>
+                        </span>
+                    </button>
+                    
+                    <!-- Mobile Menu Button - Visible on mobile and tablet -->
+                    <button id="mobileMenuButton" aria-label="Toggle mobile menu" data-translate-title="mobile_menu_toggle" class="lg:hidden p-2 sm:p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-secondary/30">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu - Responsive and accessible -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white dark:bg-gray-900 backdrop-blur-xl border-t border-gray-200 dark:border-gray-700 shadow-xl">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 space-y-1">
+                <a href="/#home" class="block py-3 px-4 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-900 dark:text-white font-medium transition-all duration-200 text-base sm:text-lg" data-translate="nav_home">Home</a>
+                <a href="/#categories" class="block py-3 px-4 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-900 dark:text-white font-medium transition-all duration-200 text-base sm:text-lg" data-translate="nav_categories">Categories</a>
+                <a href="/#devices" class="block py-3 px-4 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-900 dark:text-white font-medium transition-all duration-200 text-base sm:text-lg" data-translate="nav_devices">Devices</a>
+                <a href="/#solutions" class="block py-3 px-4 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-900 dark:text-white font-medium transition-all duration-200 text-base sm:text-lg" data-translate="nav_solutions">Solutions</a>
+                <a href="/#budget" class="block py-3 px-4 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-900 dark:text-white font-medium transition-all duration-200 text-base sm:text-lg" data-translate="nav_budget">Budget</a>
+                <a href="/#contact" class="block py-3 px-4 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-900 dark:text-white font-medium transition-all duration-200 text-base sm:text-lg" data-translate="nav_contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center hero-gradient text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="relative z-10 text-center content-container">
+            <h1 class="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl mb-6">
+                Find the Best Headphones
+            </h1>
+            <p class="text-xl sm:text-2xl mb-8 text-gray-200">
+                Tested by Real Audiophiles
+            </p>
+            <p class="text-lg mb-12 text-gray-300 max-w-2xl mx-auto">
+                Discover the perfect headphones for work, travel, gaming, and beyond.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#categories" class="btn-primary btn-lg">
+                    Explore Categories
+                </a>
+                <a href="#devices" class="btn-outline btn-lg">
+                    Browse by Device
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Categories Section -->
+    <section id="categories" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="content-container">
+            <div class="text-center mb-16">
+                <h2 class="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl mb-6">
+                    Browse by Category
+                </h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Find headphones tailored to your specific needs and preferences.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+                <a href="/categories/best-wireless-headphones/" class="category-card group">
+                    <div class="mb-4">
+                        <img src="/public/favicon.svg" alt="Wireless Headphones" class="w-12 h-12 mx-auto">
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg mb-2">Wireless</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Freedom from cables</p>
+                </a>
+                
+                <a href="/categories/best-gaming-headsets/" class="category-card group">
+                    <div class="mb-4">
+                        <img src="/public/favicon.svg" alt="Gaming Headsets" class="w-12 h-12 mx-auto">
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg mb-2">Gaming</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Immersive audio experience</p>
+                </a>
+                
+                <a href="/categories/best-noise-cancelling-headphones/" class="category-card group">
+                    <div class="mb-4">
+                        <img src="/public/favicon.svg" alt="Noise Cancelling" class="w-12 h-12 mx-auto">
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg mb-2">Noise Cancelling</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Block out distractions</p>
+                </a>
+                
+                <a href="/categories/best-studio-headphones/" class="category-card group">
+                    <div class="mb-4">
+                        <img src="/public/favicon.svg" alt="Studio Headphones" class="w-12 h-12 mx-auto">
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg mb-2">Studio</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Professional audio quality</p>
+                </a>
+                
+                <a href="/categories/best-headphones-for-work/" class="category-card group">
+                    <div class="mb-4">
+                        <img src="/public/favicon.svg" alt="Work Headphones" class="w-12 h-12 mx-auto">
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg mb-2">Work</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Productivity focused</p>
+                </a>
+                
+                <a href="/categories/best-travel-headphones/" class="category-card group">
+                    <div class="mb-4">
+                        <img src="/public/favicon.svg" alt="Travel Headphones" class="w-12 h-12 mx-auto">
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg mb-2">Travel</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Portable and durable</p>
+                </a>
+                
+                <a href="/categories/best-headphones-under-100/" class="category-card group">
+                    <div class="mb-4">
+                        <img src="/public/favicon.svg" alt="Budget Headphones" class="w-12 h-12 mx-auto">
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg mb-2">Budget</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Great value options</p>
+                </a>
+                
+                <a href="/categories/best-headphones-for-kids/" class="category-card group">
+                    <div class="mb-4">
+                        <img src="/public/favicon.svg" alt="Kids Headphones" class="w-12 h-12 mx-auto">
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg mb-2">Kids</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Safe and durable</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Device Integration Section -->
+    <section id="devices" class="py-20">
+        <div class="content-container">
+            <div class="text-center mb-16">
+                <h2 class="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl mb-6">
+                    Device Integration
+                </h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Find headphones that work seamlessly with your favorite devices and platforms.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <!-- iPhone Integration -->
+                <div class="card-hover p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                    <div class="text-center mb-4">
+                        <div class="mb-4">
+                            <img src="/public/favicon.svg" alt="iPhone" class="w-12 h-12 mx-auto">
+                        </div>
+                        <h3 class="font-heading font-semibold text-xl mb-3">iPhone</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Perfect compatibility with iOS devices</p>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-sm">Lightning connector support</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-sm">Siri integration</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-sm">AirPods alternatives</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <a href="/categories/best-headphones-for-iphone/" class="btn-primary flex-1 text-center">
+                            View iPhone Options
+                        </a>
+                        <a href="/categories/best-wireless-earbuds/" class="btn-outline flex-1 text-center">
+                            Wireless Earbuds
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Android Integration -->
+                <div class="card-hover p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                    <div class="text-center mb-4">
+                        <div class="mb-4">
+                            <img src="/public/favicon.svg" alt="Android" class="w-12 h-12 mx-auto">
+                        </div>
+                        <h3 class="font-heading font-semibold text-xl mb-3">Android</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Optimized for Android ecosystem</p>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-sm">USB-C connectivity</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-sm">Google Assistant</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-sm">High-res audio support</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <a href="/categories/best-headphones-for-android/" class="btn-primary flex-1 text-center">
+                            View Android Options
+                        </a>
+                        <a href="/categories/best-bluetooth-headphones/" class="btn-outline flex-1 text-center">
+                            Bluetooth Options
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Gaming Consoles -->
+                <div class="card-hover p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                    <div class="text-center mb-4">
+                        <div class="mb-4">
+                            <img src="/public/favicon.svg" alt="Gaming" class="w-12 h-12 mx-auto">
+                        </div>
+                        <h3 class="font-heading font-semibold text-xl mb-3">Gaming</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Immersive gaming audio experience</p>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-sm">3D spatial audio</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-sm">Low latency</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-sm">Cross-platform support</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <a href="/categories/best-gaming-headsets/" class="btn-primary flex-1 text-center">
+                            Gaming Headsets
+                        </a>
+                        <a href="/categories/best-headphones-for-ps5/" class="btn-outline flex-1 text-center">
+                            PS5 Options
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Solutions Section -->
+    <section id="solutions" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="content-container">
+            <div class="text-center mb-16">
+                <h2 class="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl mb-6">
+                    Solutions for Every Need
+                </h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    From noise cancellation to wireless freedom, find the perfect solution.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card-hover p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                    <h3 class="font-heading font-semibold text-2xl mb-4">Noise Cancellation</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Block out distractions and focus on what matters with advanced noise cancellation technology.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-sm">Active noise cancellation</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-sm">Transparency mode</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-sm">Adaptive sound</span>
+                        </div>
+                    </div>
+                    <a href="/categories/best-noise-cancelling-headphones/" class="btn-primary">
+                        Explore Noise Cancelling
+                    </a>
+                </div>
+                
+                <div class="card-hover p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                    <h3 class="font-heading font-semibold text-2xl mb-4">Wireless Freedom</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Cut the cord and enjoy true wireless freedom with long battery life and stable connections.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-sm">Bluetooth 5.0+</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-sm">Long battery life</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-sm">Quick charging</span>
+                        </div>
+                    </div>
+                    <a href="/categories/best-wireless-headphones/" class="btn-primary">
+                        Explore Wireless
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Budget Section -->
+    <section id="budget" class="py-20">
+        <div class="content-container">
+            <div class="text-center mb-16">
+                <h2 class="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl mb-6">
+                    Budget-Friendly Options
+                </h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Quality headphones don't have to break the bank. Find great value options at every price point.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <a href="/categories/best-headphones-under-100/" class="category-card group">
+                    <div class="mb-4">
+                        <span class="text-3xl font-bold text-secondary">$100</span>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg mb-2">Under $100</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Best value options</p>
+                </a>
+                
+                <a href="/categories/best-over-ear-headphones-under-100/" class="category-card group">
+                    <div class="mb-4">
+                        <span class="text-3xl font-bold text-secondary">$50</span>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg mb-2">Under $50</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Budget-friendly picks</p>
+                </a>
+                
+                <a href="/categories/best-budget-wireless-headphones/" class="category-card group">
+                    <div class="mb-4">
+                        <span class="text-3xl font-bold text-secondary">$150</span>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg mb-2">Wireless Budget</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Affordable wireless</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="content-container">
+            <div class="text-center mb-16">
+                <h2 class="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl mb-6">
+                    Get in Touch
+                </h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Have questions about headphones? Need recommendations? We'd love to hear from you.
+                </p>
+            </div>
+            
+            <div class="max-w-2xl mx-auto">
+                <form id="contactForm" class="space-y-6">
+                    <input type="hidden" name="access_key" value="testing">
+                    <input type="hidden" name="subject" value="New Contact Form Submission - MrHeadphones.com">
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name *</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-secondary focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all duration-200">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email *</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-secondary focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all duration-200">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Subject</label>
+                        <select id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-secondary focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all duration-200">
+                            <option value="">Select a topic</option>
+                            <option value="Headphone Recommendation">Headphone Recommendation</option>
+                            <option value="Technical Support">Technical Support</option>
+                            <option value="Website Feedback">Website Feedback</option>
+                            <option value="Partnership">Partnership</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message *</label>
+                        <textarea id="message" name="message" rows="6" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-secondary focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all duration-200 resize-none"></textarea>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" id="submitBtn" class="btn-primary btn-lg">
+                            <span id="submitText">Send Message</span>
+                            <span id="submitLoading" class="hidden">
+                                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                </svg>
+                                Sending...
+                            </span>
+                        </button>
+                    </div>
+                </form>
+                
+                <div id="successMessage" class="hidden mt-6 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl text-green-800 dark:text-green-200">
+                    <div class="flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        Thank you! Your message has been sent successfully. We'll get back to you soon.
+                    </div>
+                </div>
+                
+                <div id="errorMessage" class="hidden mt-6 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl text-red-800 dark:text-red-200">
+                    <div class="flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                        </svg>
+                        <span id="errorText">Something went wrong. Please try again.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="content-container-wide w-full max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="/public/favicon.svg?v=1.0.1" alt="MrHeadphones Logo" class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8">
+                        <span class="font-heading font-bold text-base sm:text-lg lg:text-xl xl:text-2xl">MrHeadphones</span>
+                    </div>
+                    <p class="text-gray-300 mb-4 responsive-text">
+                        MrHeadphones.com is a user-first headphone discovery platform that helps you find the right pair based on real-world testing, expert research, and audio performance for every need.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="mailto:hello@mrheadphones.com" class="text-gray-300 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-heading font-semibold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/#home" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="/#categories" class="text-gray-300 hover:text-white transition-colors">Categories</a></li>
+                        <li><a href="/#devices" class="text-gray-300 hover:text-white transition-colors">Devices</a></li>
+                        <li><a href="/#solutions" class="text-gray-300 hover:text-white transition-colors">Solutions</a></li>
+                        <li><a href="/#budget" class="text-gray-300 hover:text-white transition-colors">Budget</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-heading font-semibold text-lg mb-4">Connect</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/#contact" class="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="mailto:hello@mrheadphones.com" class="text-gray-300 hover:text-white transition-colors">Email</a></li>
+                        <li><a href="/privacy.html" class="text-gray-300 hover:text-white transition-colors">Privacy</a></li>
+                        <li><a href="/terms.html" class="text-gray-300 hover:text-white transition-colors">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300 responsive-text">
+                    © 2025 MrHeadphones.com. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="/src/js/main.js"></script>
+    <script>
+        // Contact form handling with web3forms
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const submitText = document.getElementById('submitText');
+            const submitLoading = document.getElementById('submitLoading');
+            const successMessage = document.getElementById('successMessage');
+            const errorMessage = document.getElementById('errorMessage');
+            const errorText = document.getElementById('errorText');
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            submitText.classList.add('hidden');
+            submitLoading.classList.remove('hidden');
+            successMessage.classList.add('hidden');
+            errorMessage.classList.add('hidden');
+            
+            try {
+                const formData = new FormData(this);
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    // Show success message
+                    successMessage.classList.remove('hidden');
+                    this.reset();
+                } else {
+                    // Show error message
+                    errorText.textContent = result.message || 'Something went wrong. Please try again.';
+                    errorMessage.classList.remove('hidden');
+                }
+            } catch (error) {
+                // Show error message
+                errorText.textContent = 'Network error. Please check your connection and try again.';
+                errorMessage.classList.remove('hidden');
+            } finally {
+                // Reset button state
+                submitBtn.disabled = false;
+                submitText.classList.remove('hidden');
+                submitLoading.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
+EOF
+
+echo "✅ Homepage enhanced with contact section and improved footer!" 
