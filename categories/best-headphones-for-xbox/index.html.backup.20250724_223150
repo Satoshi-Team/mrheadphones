@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Bass Headphones 2025 - Bass-Heavy Picks | MrHeadphones.com</title>
-    <meta name="description" content="Find the best bass headphones. Expert picks for bass-heavy audio with deep, powerful low frequencies and immersive sound experiences.">
+    <title>Best Headphones for Xbox 2025 - Top Gaming Picks | MrHeadphones.com</title>
+    <meta name="description" content="Find the best headphones for Xbox Series X/S gaming. Expert picks for spatial audio, clear communication, and immersive gaming experience on Xbox.">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,6 +13,7 @@
     <!-- TailwindCSS -->
     <link href="/dist/output.css?v=1.0.3" rel="stylesheet">
     <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/public/favicon.svg">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-89QWFC1J9M"></script>
     <script>
@@ -21,7 +22,6 @@
       gtag('js', new Date());
       gtag('config', 'G-89QWFC1J9M');
     </script>
-    <link rel="icon" type="image/svg+xml" href="/public/favicon.svg">
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white dark-mode-transition">
     <!-- Navigation -->
@@ -82,51 +82,132 @@
             </div>
         </div>
     </nav>
-    <section class="pt-20 pb-12 bg-hero-gradient text-white">
-        <div class="content-container-wide">
+    <section class="pt-32 pb-16 hero-gradient text-white relative overflow-hidden">
+        <div class="content-container text-center">
             <h1 class="font-heading font-bold responsive-heading mb-6">
-                Best Bass Headphones
+                Best Headphones for Xbox
             </h1>
-            <p class="text-lg sm:text-xl mb-8 text-gray-200 max-w-3xl mx-auto responsive-text text-gray-300">
-                Feel the music with the best bass headphones. Expert picks for bass-heavy audio with deep, powerful low frequencies and immersive sound experiences.
+            <p class="responsive-text mb-8 text-gray-200 max-w-4xl mx-auto text-gray-300">
+                Experience next-generation gaming audio with the best headphones for Xbox Series X/S. Spatial audio, crystal-clear communication, and immersive sound for your Xbox gaming sessions.
             </p>
 </div>
     </section>
     <!-- Content Section -->
-    <section class="py-12 section-padding">
+    <section class="section-padding">
         <div class="content-container">
             <!-- Introduction -->
             <div class="content-container-wide">
                 <p class="text-lg text-gray-600 dark:text-gray-300 mb-6 responsive-text text-gray-200">
-                    Bass headphones are designed to deliver powerful, deep low frequencies that make music feel alive and immersive. Whether you're listening to hip-hop, electronic music, or any genre that relies on strong bass, the right headphones can transform your listening experience.
+                    Xbox Series X/S brings incredible gaming experiences with spatial audio technology that puts you in the center of the action. The right headphones can make all the difference in competitive multiplayer and immersive single-player games.
                 </p>
                 <p class="text-lg text-gray-600 dark:text-gray-300 mb-6 responsive-text text-gray-200">
-                    We've tested headphones specifically for bass performance to find options that deliver impactful, well-controlled low frequencies without sacrificing clarity in the mid and high ranges.
+                    We've tested headphones specifically with Xbox Series X/S to find options that take full advantage of Microsoft's spatial audio technology, provide clear voice chat, and offer comfort for extended gaming sessions.
                 </p>
             <!-- Top Picks -->
             <div class="mb-12">
                 <h2 class="font-heading font-bold text-2xl sm:text-3xl mb-8 text-center">
-                    Our Top Bass Picks
+                    Our Top Xbox Picks
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Product Card 1 -->
                     <div class="card-hover">
-                        <h3 class="font-heading font-semibold text-lg mb-3">Do I need an amplifier for bass headphones?</h3>
+                        <div class="text-center mb-4 content-container">
+                            <div class="mb-4">
+                                <img src="/public/favicon.svg" alt="Headphones Icon" class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 transition-all duration-300 group-hover:scale-105">
+                            <h3 class="font-heading font-semibold text-xl mb-2">SteelSeries Arctis 7X</h3>
+                            <p class="text-2xl font-bold text-secondary mb-2 responsive-text text-gray-200 text-gray-300">$149</p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center flex-shrink-0">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <span class="text-sm">Xbox Series X/S optimized</span>
+                            <div class="flex items-center flex-shrink-0">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <span class="text-sm">24+ hour battery life</span>
+                            <div class="flex items-center flex-shrink-0">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <span class="text-sm">Clear microphone</span>
+                            <div class="flex items-center flex-shrink-0">
+                                <span class="text-red-500 mr-2">✗</span>
+                                <span class="text-sm">Premium price point</span>
+                        <a href="https://www.amazon.com/s?k=SteelSeries+Arctis+7X+headphones&linkCode=ll2&tag=ngp0ba-20" class="btn-product" target="_blank" rel="noopener noreferrer">
+                            Check Price
+                        </a>
+</div>
+                    <!-- Product Card 2 -->
+                    <div class="card-hover">
+                        <div class="text-center mb-4 content-container">
+                            <div class="mb-4">
+                                <img src="/public/favicon.svg" alt="Headphones Icon" class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 transition-all duration-300 group-hover:scale-105">
+                            <h3 class="font-heading font-semibold text-xl mb-2">Razer Kaira Pro</h3>
+                            <p class="text-2xl font-bold text-secondary mb-2 responsive-text text-gray-200 text-gray-300">$199</p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center flex-shrink-0">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <span class="text-sm">Xbox Wireless technology</span>
+                            <div class="flex items-center flex-shrink-0">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <span class="text-sm">Premium audio quality</span>
+                            <div class="flex items-center flex-shrink-0">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <span class="text-sm">Built-in controls</span>
+                            <div class="flex items-center flex-shrink-0">
+                                <span class="text-red-500 mr-2">✗</span>
+                                <span class="text-sm">Higher price point</span>
+                        <a href="https://www.amazon.com/s?k=Razer+Kaira+Pro+headphones&linkCode=ll2&tag=ngp0ba-20" class="btn-product" target="_blank" rel="noopener noreferrer">
+                            Check Price
+                        </a>
+</div>
+                    <!-- Product Card 3 -->
+                    <div class="card-hover">
+                        <div class="text-center mb-4 content-container">
+                            <div class="mb-4">
+                                <img src="/public/favicon.svg" alt="Headphones Icon" class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 transition-all duration-300 group-hover:scale-105">
+                            <h3 class="font-heading font-semibold text-xl mb-2">HyperX CloudX Flight</h3>
+                            <p class="text-2xl font-bold text-secondary mb-2 responsive-text text-gray-200 text-gray-300">$159</p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center flex-shrink-0">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <span class="text-sm">30+ hour battery life</span>
+                            <div class="flex items-center flex-shrink-0">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <span class="text-sm">Lightweight design</span>
+                            <div class="flex items-center flex-shrink-0">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <span class="text-sm">Detachable microphone</span>
+                            <div class="flex items-center flex-shrink-0">
+                                <span class="text-red-500 mr-2">✗</span>
+                                <span class="text-sm">No noise cancellation</span>
+                        <a href="https://www.amazon.com/s?k=HyperX+CloudX+Flight+headphones&linkCode=ll2&tag=ngp0ba-20" class="btn-product" target="_blank" rel="noopener noreferrer">
+                            Check Price
+                        </a>
+</div>
+            <!-- Xbox Features Section -->
+            <div class="mb-12">
+                <h2 class="font-heading font-bold text-2xl sm:text-3xl mb-8 text-center">
+                    Essential Xbox Features
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="card-hover">
+                        <h3 class="font-heading font-semibold text-lg mb-3">Can I use PlayStation headphones with Xbox?</h3>
                         <p class="text-gray-600 dark:text-gray-300 responsive-text text-gray-200">
-                            Most bass headphones work well without an amplifier, but a dedicated amp can provide more power and control for the low frequencies, especially with high-impedance models.
+                            PlayStation headphones typically work with Xbox via USB dongle, but you'll miss out on Xbox-specific features like Xbox Wireless technology.
                         </p>
             <!-- Related Articles -->
             <div class="mb-12">
                 <h2 class="font-heading font-bold text-2xl sm:text-3xl mb-8 text-center">
                     Related Articles
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <a href="../best-headphones-for-music.html" class="card hover:scale-105 transition-transform">
-                        <h3 class="font-heading font-semibold text-lg mb-2">Best Headphones for Music</h3>
-                        <p class="text-gray-600 dark:text-gray-300 responsive-text text-gray-200">Audiophile music listening.</p>
-                    <a href="../best-studio-headphones.html" class="card hover:scale-105 transition-transform">
-                        <h3 class="font-heading font-semibold text-lg mb-2">Best Studio Headphones</h3>
-                        <p class="text-gray-600 dark:text-gray-300 responsive-text text-gray-200">Professional audio production.</p>
+                <div class="related-articles-grid gap-8">
+                    <a href="/categories/best-headphones-for-ps5/" class="related-article-btn">
+                        <h3>Best Headphones for PS5</h3>
+                        <p>Perfect audio companions for PlayStation 5.</p>
+                    <span class="btn-primary btn-sm" data-translate="btn_read_more">Read More</span>
+                    </button>
+                    <a href="/categories/best-headphones-for-gaming/" class="related-article-btn">
+                        <h3>Best Gaming Headphones</h3>
+                        <p>Complete guide to gaming audio solutions.</p>
+                    <span class="btn-primary btn-sm" data-translate="btn_read_more">Read More</span>
+                    </button>
 </div>
 </div>
 </div>
@@ -175,27 +256,27 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="col-span-1 md:col-span-2">
                     <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
-                        <img src="/public/favicon.svg?v=1.0.1" alt="MrHeadphones Logo" class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 transition-all duration-300 group-hover:scale-105">
+                        <img src="../../../public/favicon.svg?v=1.0.1" alt="MrHeadphones Logo" class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 transition-all duration-300 group-hover:scale-105">
                         <span class="font-heading font-bold text-base sm:text-lg lg:text-xl xl:text-2xl text-gray-900 dark:text-white">MrHeadphones</span>
                     <p class="text-gray-300 mb-4 responsive-text text-gray-200">
                         MrHeadphones.com is a user-first headphone discovery platform that helps you find the right pair based on real-world testing, expert research, and audio performance for every need.
                     </p>
                 <div>
-                    <h3 class="font-heading font-semibold text-lg mb-4">Quick Links</h3>
+                    <h3 class="font-heading font-semibold text-lg mb-4" data-translate="footer_quick_links">Quick Links</h3>
                     <ul class="space-y-2">
                         <li><a href="/#home" class="nav-link text-sm xl:text-base">Home</a></li>
 </div>
                         <li><a href="/#categories" class="nav-link text-sm xl:text-base">Categories</a></li>
                         <li><a href="/#devices" class="nav-link text-sm xl:text-base">Devices</a></li>
-                        <li><a href="/#contact" class="nav-link text-sm xl:text-base">Contact</a></li>
+                        <li><a href="mailto:hello@mrheadphones.com" class="text-gray-300 hover:text-white transition-colors nav-link">Contact</a></li>
                     </ul>
                 <div>
-                    <h3 class="font-heading font-semibold text-lg mb-4">Connect</h3>
+                    <h3 class="font-heading font-semibold text-lg mb-4" data-translate="footer_connect">Connect</h3>
                     <ul class="space-y-2">
-                        <li><a href="mailto:hello@mrheadphones.com" class="text-gray-300 hover:text-white transition-colors nav-link">Email</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors nav-link">About</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors nav-link">Privacy</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors nav-link">Terms</a></li>
+                        <li><a href="mailto:hello@mrheadphones.com" class="text-gray-300 hover:text-white transition-colors nav-link" data-translate="btn_email">Email</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors nav-link" data-translate="btn_about">About</a></li>
+                        <li><a href="/privacy.html" class="text-gray-300 hover:text-white transition-colors nav-link" data-translate="btn_privacy">Privacy</a></li>
+                        <li><a href="/terms.html" class="text-gray-300 hover:text-white transition-colors nav-link" data-translate="btn_terms">Terms</a></li>
                     </ul>
             <div class="border-t border-gray-700 mt-8 pt-8 text-center content-container">
                 <p class="text-gray-300 responsive-text text-gray-200">
@@ -203,7 +284,8 @@
                 </p>
     </footer>
     <!-- JavaScript -->
-    <script src="../../../src/js/main.js"></script>
+    <script src="/src/js/main.js"></script>
+    
 </body>
 </html> 
 </div>

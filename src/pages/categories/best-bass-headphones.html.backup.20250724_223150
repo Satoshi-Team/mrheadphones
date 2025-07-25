@@ -120,7 +120,7 @@
                 <h2 class="font-heading font-bold text-2xl sm:text-3xl mb-8 text-center">
                     Related Articles
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 gap-8">
                     <a href="../best-headphones-for-music.html" class="card hover:scale-105 transition-transform">
                         <h3 class="font-heading font-semibold text-lg mb-2">Best Headphones for Music</h3>
                         <p class="text-gray-600 dark:text-gray-300 responsive-text text-gray-200">Audiophile music listening.</p>
