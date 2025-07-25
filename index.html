@@ -29,7 +29,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16 sm:h-18 lg:h-20">
                 <!-- Logo -->
-                <div class="flex items-center flex-shrink-0">
+                <div class="flex items-start space-x-2 w-full flex-shrink-0">
                     <a href="/" class="flex items-center space-x-2 sm:space-x-3 group">
                         <img src="/public/favicon.svg?v=1.0.1" alt="MrHeadphones Logo" class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 transition-all duration-300 group-hover:scale-105">
                         <span class="font-heading font-bold text-base sm:text-lg lg:text-xl xl:text-2xl text-gray-900 dark:text-white">MrHeadphones</span>
@@ -37,7 +37,7 @@
                 </div>
                 
                 <!-- Desktop Navigation - Hidden on mobile -->
-                <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
+                <div class="hidden lg:flex items-center space-x-4 xl:space-x-6 2xl:space-x-8">
                     <a href="/#home" class="nav-link text-sm xl:text-base" data-translate="nav_home">Home</a>
                     <a href="/#categories" class="nav-link text-sm xl:text-base" data-translate="nav_categories">Categories</a>
                     <a href="/#devices" class="nav-link text-sm xl:text-base" data-translate="nav_devices">Devices</a>
@@ -74,11 +74,11 @@
         <!-- Mobile Menu - Responsive and accessible -->
         <div id="mobileMenu" class="hidden lg:hidden bg-white/98 dark:bg-gray-900/98 backdrop-blur-xl border-t border-gray-200/50 dark:border-gray-700/50 shadow-xl">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 space-y-1">
-                <a href="/#home" class="block py-3 px-4 rounded-xl hover:bg-gray-100/60 dark:hover:bg-gray-700/60 text-gray-900 dark:text-white font-medium transition-all duration-200 text-base sm:text-lg" data-translate="nav_home">Home</a>
-                <a href="/#categories" class="block py-3 px-4 rounded-xl hover:bg-gray-100/60 dark:hover:bg-gray-700/60 text-gray-900 dark:text-white font-medium transition-all duration-200 text-base sm:text-lg" data-translate="nav_categories">Categories</a>
-                <a href="/#devices" class="block py-3 px-4 rounded-xl hover:bg-gray-100/60 dark:hover:bg-gray-700/60 text-gray-900 dark:text-white font-medium transition-all duration-200 text-base sm:text-lg" data-translate="nav_devices">Devices</a>
-                <a href="/#solutions" class="block py-3 px-4 rounded-xl hover:bg-gray-100/60 dark:hover:bg-gray-700/60 text-gray-900 dark:text-white font-medium transition-all duration-200 text-base sm:text-lg" data-translate="nav_solutions">Solutions</a>
-                <a href="/#budget" class="block py-3 px-4 rounded-xl hover:bg-gray-100/60 dark:hover:bg-gray-700/60 text-gray-900 dark:text-white font-medium transition-all duration-200 text-base sm:text-lg" data-translate="nav_budget">Budget</a>
+                <a href="/#home" class="block py-2 sm:py-3 px-3 sm:px-4 rounded-xl hover:bg-gray-100/60 dark:hover:bg-gray-700/60 text-gray-900 dark:text-white font-medium transition-all duration-200 text-sm sm:text-base" data-translate="nav_home">Home</a>
+                <a href="/#categories" class="block py-2 sm:py-3 px-3 sm:px-4 rounded-xl hover:bg-gray-100/60 dark:hover:bg-gray-700/60 text-gray-900 dark:text-white font-medium transition-all duration-200 text-sm sm:text-base" data-translate="nav_categories">Categories</a>
+                <a href="/#devices" class="block py-2 sm:py-3 px-3 sm:px-4 rounded-xl hover:bg-gray-100/60 dark:hover:bg-gray-700/60 text-gray-900 dark:text-white font-medium transition-all duration-200 text-sm sm:text-base" data-translate="nav_devices">Devices</a>
+                <a href="/#solutions" class="block py-2 sm:py-3 px-3 sm:px-4 rounded-xl hover:bg-gray-100/60 dark:hover:bg-gray-700/60 text-gray-900 dark:text-white font-medium transition-all duration-200 text-sm sm:text-base" data-translate="nav_solutions">Solutions</a>
+                <a href="/#budget" class="block py-2 sm:py-3 px-3 sm:px-4 rounded-xl hover:bg-gray-100/60 dark:hover:bg-gray-700/60 text-gray-900 dark:text-white font-medium transition-all duration-200 text-sm sm:text-base" data-translate="nav_budget">Budget</a>
             </div>
         </div>
     </nav>
@@ -86,51 +86,53 @@
     <section id="home" class="min-h-screen flex items-center justify-center bg-hero-gradient text-white relative overflow-hidden">
         <div class="absolute inset-0 bg-black/20"></div>
         <div class="relative z-10 text-center content-container">
-            <h1 class="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl mb-6 responsive-heading">
+            <h1 class="font-heading font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6 responsive-heading leading-tight">
                 Find the Best Headphones
             </h1>
-            <p class="text-xl sm:text-2xl mb-8 text-gray-200 responsive-text text-gray-300">
+            <p class="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 text-gray-200 responsive-text text-gray-300">
                 Tested by Real Audiophiles
             </p>
-            <p class="text-lg mb-12 text-gray-300 max-w-2xl mx-auto responsive-text text-gray-200">
+            <p class="text-base sm:text-lg mb-8 sm:mb-12 text-gray-300 max-w-2xl mx-auto responsive-text text-gray-200 leading-relaxed">
                 Discover the perfect headphones for work, travel, gaming, and beyond.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#categories" class="btn-primary btn-lg">
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center w-full max-w-md sm:max-w-lg mx-auto">
+                <a href="#categories" class="btn-primary w-full sm:w-auto px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-semibold rounded-xl transition-all duration-300">
                     Browse Top Headphones
                 </a>
-                <a href="#devices" class="btn-secondary btn-lg">
+                <a href="#devices" class="btn-secondary w-full sm:w-auto px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-semibold rounded-xl transition-all duration-300">
                     Find Headphones by Device
                 </a>
 </div>
 </div>
     </section>
     <!-- Categories Section -->
-    <section id="categories" class="py-20 bg-gray-50 dark:bg-gray-900 section-padding">
-        <div class="content-container-wide">
+    <section id="categories" class="py-12 sm:py-16 lg:py-20 bg-gray-50 dark:bg-gray-900 section-padding">
+        <div class="content-container-wide w-full max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
             <div class="text-center mb-16 content-container">
-                <h2 class="font-heading font-bold text-3xl sm:text-4xl mb-4">
+                <h2 class="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl mb-3 sm:mb-4">
                     Shop by Need
                 </h2>
-                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto responsive-text text-gray-200">
+                <p class="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto responsive-text text-gray-200 leading-relaxed">
                     MrHeadphones.com curates expert picks for every lifestyle, device, and audio challenge.
                 </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 w-full max-w-7xl mx-auto items-stretch">
                 <!-- Category cards will go here -->
-                <div class="card-hover">
-                    <h3 class="font-heading font-semibold text-xl mb-3">General Use</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4 responsive-text text-gray-200">Perfect headphones for everyday listening and common use cases.</p>
+                <div class="card-hover w-full p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex flex-col h-full min-h-0">
+                    <h3 class="font-heading font-semibold text-lg sm:text-xl mb-2 sm:mb-3 leading-tight">General Use</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed flex-1 text-sm sm:text-base">Perfect headphones for everyday listening and common use cases.</p>
                     <a href="./categories/best-wireless-headphones/" class="text-secondary hover:underline nav-link text-gray-300 hover:text-white transition-colors">Explore →</a>
 </div>
-                <div class="card-hover">
-                    <h3 class="font-heading font-semibold text-xl mb-3">Study & Work</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4 responsive-text text-gray-200">Headphones optimized for focus, productivity, and learning.</p>
+                <div class="card-hover w-full p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex flex-col h-full min-h-0">
+                    <h3 class="font-heading font-semibold text-lg sm:text-xl mb-2 sm:mb-3 leading-tight">Study & Work</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed flex-1 text-sm sm:text-base">Headphones optimized for focus, productivity, and learning.</p>
                     <a href="./categories/best-headphones-for-studying/" class="text-secondary hover:underline nav-link text-gray-300 hover:text-white transition-colors">Explore →</a>
 </div>
-                <div class="card-hover">
-                    <h3 class="font-heading font-semibold text-xl mb-3">Gaming</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4 responsive-text text-gray-200">Professional gaming headsets with immersive audio and clear communication.</p>
+                <div class="card-hover w-full p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex flex-col h-full min-h-0">
+                    <h3 class="font-heading font-semibold text-lg sm:text-xl mb-2 sm:mb-3 leading-tight">Gaming</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed flex-1 text-sm sm:text-base">Professional gaming headsets with immersive audio and clear communication.</p>
                     <a href="./categories/best-headphones-for-gaming/" class="text-secondary hover:underline nav-link text-gray-300 hover:text-white transition-colors">Explore →</a>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -149,86 +151,93 @@
                 <p class="text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto responsive-text text-gray-200">
                     Find the perfect headphones for your specific device and platform.
                 </p>
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-                <!-- Device cards will go here -->
-                <a href="./categories/best-headphones-for-iphone/" class="card text-center hover:scale-105 transition-transform nav-link text-gray-300 hover:text-white transition-colors">
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-stretch">
+                <a href="#" class="card-hover w-full p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex flex-col h-full items-center justify-between">
                     <div class="mb-3">
-                        <svg class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto text-secondary" fill="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
                         </svg>
-                    <h3 class="font-heading font-semibold">iPhone</h3>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg mb-2">iPhone</h3>
+                    <a href="#" class="btn btn-primary mt-4 w-full">Check Price</a>
                 </a>
-                <a href="./categories/best-headphones-for-android/" class="card text-center hover:scale-105 transition-transform nav-link text-gray-300 hover:text-white transition-colors">
+                <a href="#" class="card-hover w-full p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex flex-col h-full items-center justify-between">
                     <div class="mb-3">
-                        <svg class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto text-secondary" fill="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M17.6 11.48c.23-.29.4-.62.4-1.01 0-1.1-.9-2-2-2h-6.63l1.91-1.91c.29-.29.29-.77 0-1.06-.29-.29-.77-.29-1.06 0L6.82 8.35c-.29.29-.29.77 0 1.06l3.01 3.01c.29.29.77.29 1.06 0L15.3 9.7c.29-.29.29-.77 0-1.06-.29-.29-.77-.29-1.06 0l-1.91 1.91V10.5c0 .55.45 1 1 1h4.27z"/>
                         </svg>
-                    <h3 class="font-heading font-semibold">Android</h3>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg mb-2">Android</h3>
+                    <a href="#" class="btn btn-primary mt-4 w-full">Check Price</a>
                 </a>
-                <a href="./categories/best-headphones-for-ps5/" class="card text-center hover:scale-105 transition-transform nav-link text-gray-300 hover:text-white transition-colors">
+                <a href="#" class="card-hover w-full p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex flex-col h-full items-center justify-between">
                     <div class="mb-3">
-                        <svg class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto text-secondary" fill="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
                         </svg>
-                    <h3 class="font-heading font-semibold">PS5</h3>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg mb-2">PS5</h3>
+                    <a href="#" class="btn btn-primary mt-4 w-full">Check Price</a>
                 </a>
-                <a href="./categories/best-headphones-for-xbox/" class="card text-center hover:scale-105 transition-transform nav-link text-gray-300 hover:text-white transition-colors">
+                <a href="#" class="card-hover w-full p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex flex-col h-full items-center justify-between">
                     <div class="mb-3">
-                        <svg class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto text-secondary" fill="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
                         </svg>
-                    <h3 class="font-heading font-semibold">Xbox</h3>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg mb-2">Xbox</h3>
+                    <a href="#" class="btn btn-primary mt-4 w-full">Check Price</a>
                 </a>
-                <a href="./categories/best-headphones-for-mac/" class="card text-center hover:scale-105 transition-transform nav-link text-gray-300 hover:text-white transition-colors">
+                <a href="#" class="card-hover w-full p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex flex-col h-full items-center justify-between">
                     <div class="mb-3">
-                        <svg class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto text-secondary" fill="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/>
                         </svg>
-                    <h3 class="font-heading font-semibold">MacBook</h3>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg mb-2">MacBook</h3>
+                    <a href="#" class="btn btn-primary mt-4 w-full">Check Price</a>
                 </a>
-                <a href="./categories/best-headphones-for-work/" class="card text-center hover:scale-105 transition-transform nav-link text-gray-300 hover:text-white transition-colors">
+                <a href="#" class="card-hover w-full p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex flex-col h-full items-center justify-between">
                     <div class="mb-3">
-                        <svg class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto text-secondary" fill="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/>
                         </svg>
-                    <h3 class="font-heading font-semibold">Windows</h3>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg mb-2">Windows</h3>
+                    <a href="#" class="btn btn-primary mt-4 w-full">Check Price</a>
                 </a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+            </div>
+        </div>
     </section>
     <!-- Solutions Section -->
-    <section id="solutions" class="py-20 bg-gray-50 dark:bg-gray-900 section-padding">
-        <div class="content-container-wide">
+    <section id="solutions" class="py-12 sm:py-16 lg:py-20 bg-gray-50 dark:bg-gray-900 section-padding">
+        <div class="content-container-wide w-full max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
             <div class="text-center mb-16 content-container">
-                <h2 class="font-heading font-bold text-3xl sm:text-4xl mb-4">
+                <h2 class="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl mb-3 sm:mb-4">
                     Specialized Solutions
                 </h2>
-                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto responsive-text text-gray-200">
+                <p class="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto responsive-text text-gray-200 leading-relaxed">
                     Headphones designed for specific needs and challenges.
                 </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 w-full max-w-7xl mx-auto items-stretch">
                 <!-- Solution cards will go here -->
-                <div class="card-hover">
-                    <h3 class="font-heading font-semibold text-xl mb-3">Kids & Seniors</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4 responsive-text text-gray-200">Safe, comfortable headphones for all ages.</p>
+                <div class="card-hover w-full p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex flex-col h-full min-h-0">
+                    <h3 class="font-heading font-semibold text-lg sm:text-xl mb-2 sm:mb-3 leading-tight">Kids & Seniors</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed flex-1 text-sm sm:text-base">Safe, comfortable headphones for all ages.</p>
                     <a href="./categories/best-headphones-for-kids/" class="text-secondary hover:underline nav-link text-gray-300 hover:text-white transition-colors">Learn More →</a>
 </div>
-                <div class="card-hover">
-                    <h3 class="font-heading font-semibold text-xl mb-3">Special Needs</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4 responsive-text text-gray-200">Headphones for ADHD, autism, and hearing support.</p>
+                <div class="card-hover w-full p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex flex-col h-full min-h-0">
+                    <h3 class="font-heading font-semibold text-lg sm:text-xl mb-2 sm:mb-3 leading-tight">Special Needs</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed flex-1 text-sm sm:text-base">Headphones for ADHD, autism, and hearing support.</p>
                     <a href="./categories/best-headphones-for-studying/" class="text-secondary hover:underline nav-link text-gray-300 hover:text-white transition-colors">Learn More →</a>
 </div>
-                <div class="card-hover">
-                    <h3 class="font-heading font-semibold text-xl mb-3">Comfort Features</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4 responsive-text text-gray-200">For glasses wearers, small ears, and sensitive users.</p>
+                <div class="card-hover w-full p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex flex-col h-full min-h-0">
+                    <h3 class="font-heading font-semibold text-lg sm:text-xl mb-2 sm:mb-3 leading-tight">Comfort Features</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed flex-1 text-sm sm:text-base">For glasses wearers, small ears, and sensitive users.</p>
                     <a href="./categories/best-headphones-for-music/" class="text-secondary hover:underline nav-link text-gray-300 hover:text-white transition-colors">Learn More →</a>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -238,30 +247,30 @@
 </div>
     </section>
     <!-- Budget Section -->
-    <section id="budget" class="section-padding">
-        <div class="content-container-wide">
+    <section id="budget" class="py-12 sm:py-16 lg:py-20 xl:py-24">
+        <div class="content-container-wide w-full max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
             <div class="text-center mb-16 content-container">
-                <h2 class="font-heading font-bold text-3xl sm:text-4xl mb-4">
+                <h2 class="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl mb-3 sm:mb-4">
                     Budget-Friendly Options
                 </h2>
-                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto responsive-text text-gray-200">
+                <p class="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto responsive-text text-gray-200 leading-relaxed">
                     Quality headphones that won't break the bank.
                 </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 w-full max-w-7xl mx-auto items-stretch">
                 <!-- Budget cards will go here -->
-                <div class="card-hover">
-                    <h3 class="font-heading font-semibold text-xl mb-3">Under $100</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4 responsive-text text-gray-200">Best value headphones for budget-conscious buyers.</p>
+                <div class="card-hover w-full p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex flex-col h-full min-h-0">
+                    <h3 class="font-heading font-semibold text-lg sm:text-xl mb-2 sm:mb-3 leading-tight">Under $100</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed flex-1 text-sm sm:text-base">Best value headphones for budget-conscious buyers.</p>
                     <a href="./categories/best-headphones-under-100/" class="text-secondary hover:underline nav-link text-gray-300 hover:text-white transition-colors">Shop Now →</a>
 </div>
-                <div class="card-hover">
-                    <h3 class="font-heading font-semibold text-xl mb-3">Student Budget</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4 responsive-text text-gray-200">Affordable options perfect for students and learners.</p>
+                <div class="card-hover w-full p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex flex-col h-full min-h-0">
+                    <h3 class="font-heading font-semibold text-lg sm:text-xl mb-2 sm:mb-3 leading-tight">Student Budget</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed flex-1 text-sm sm:text-base">Affordable options perfect for students and learners.</p>
                     <a href="./categories/best-budget-wireless-headphones/" class="text-secondary hover:underline nav-link text-gray-300 hover:text-white transition-colors">Shop Now →</a>
 </div>
-                <div class="card-hover">
-                    <h3 class="font-heading font-semibold text-xl mb-3">Long Battery Life</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4 responsive-text text-gray-200">Wireless headphones that last all day and night.</p>
+                <div class="card-hover w-full p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex flex-col h-full min-h-0">
+                    <h3 class="font-heading font-semibold text-lg sm:text-xl mb-2 sm:mb-3 leading-tight">Long Battery Life</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed flex-1 text-sm sm:text-base">Wireless headphones that last all day and night.</p>
                     <a href="./categories/best-wireless-headphones/" class="text-secondary hover:underline nav-link text-gray-300 hover:text-white transition-colors">Shop Now →</a>
 </div>
 </div>
@@ -272,10 +281,10 @@
 </div>
     </section>
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-900 section-padding">
-        <div class="content-container">
+    <section id="contact" class="py-12 sm:py-16 lg:py-20 bg-gray-50 dark:bg-gray-900 section-padding">
+        <div class="content-container w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 content-container">
-                <h2 class="font-heading font-bold text-3xl sm:text-4xl mb-4">
+                <h2 class="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl mb-3 sm:mb-4">
                     Get in Touch
                 </h2>
                 <p class="text-lg text-gray-600 dark:text-gray-300 responsive-text text-gray-200">
@@ -283,16 +292,16 @@
                 </p>
             <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-8 card">
                 <form class="space-y-6" id="contactForm">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                         <div>
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent dark:bg-gray-800">
+                            <input type="text" id="name" name="name" class="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent dark:bg-gray-800 text-sm sm:text-base">
                         <div>
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent dark:bg-gray-800">
+                            <input type="email" id="email" name="email" class="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent dark:bg-gray-800 text-sm sm:text-base">
                     <div>
                         <label for="message" class="form-label">Message</label>
-                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent dark:bg-gray-800"></textarea>
+                        <textarea id="message" name="message" rows="4" class="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent dark:bg-gray-800 text-sm sm:text-base"></textarea>
                     <div class="text-center content-container">
                         <button type="submit" class="btn-primary">
                             Send Message
@@ -312,13 +321,14 @@
 </div>
 </div>
 </div>
+</div>
     </section>
     <!-- Footer -->
     <footer class="bg-primary text-white py-12">
-        <div class="content-container-wide">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="content-container-wide w-full max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
                 <div class="col-span-1 md:col-span-2">
-                    <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
+                    <div class="hidden lg:flex items-center space-x-4 xl:space-x-6 2xl:space-x-8">
                         <img src="/public/favicon.svg?v=1.0.1" alt="MrHeadphones Logo" class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 transition-all duration-300 group-hover:scale-105">
                         <span class="font-heading font-bold text-base sm:text-lg lg:text-xl xl:text-2xl text-gray-900 dark:text-white">MrHeadphones</span>
                     <p class="text-gray-300 mb-4 text-sm sm:text-base responsive-text text-gray-200">
@@ -346,20 +356,13 @@
                 </p>
     </footer>
     <!-- Floating Compare Link -->
-    <a href="#compare" class="fixed bottom-6 right-6 bg-secondary hover:bg-secondary/90 text-white p-4 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 z-40 group hover:scale-105 focus:outline-none focus:ring-2 focus:ring-secondary/30 border border-white/10">
-        <svg class="w-4 h-4 inline transition-transform duration-300 group-hover:translate-x-0.5" fill="currentColor" viewBox="0 0 24 24">
+    <a href="#compare" class="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 bg-secondary hover:bg-secondary/90 text-white p-3 sm:p-4 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 z-40 group hover:scale-105 focus:outline-none focus:ring-2 focus:ring-secondary/30 border border-white/10">
+        <svg class="w-3 h-3 sm:w-4 sm:h-4 inline transition-transform duration-300 group-hover:translate-x-0.5" fill="currentColor" viewBox="0 0 24 24">
             <path d="M9 3l-6 6 6 6V9h6V3H9zm6 12v3h6v-6h-6v3z"/>
         </svg>
-        <span class="ml-2 font-semibold text-sm">Compare</span>
+        <span class="ml-1 sm:ml-2 font-semibold text-xs sm:text-sm">Compare</span>
     </a>
     <!-- JavaScript -->
     <script src="/src/js/main.js"></script>
 </body>
 </html> 
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>

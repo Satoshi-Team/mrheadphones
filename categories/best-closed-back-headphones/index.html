@@ -29,7 +29,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16 sm:h-18 lg:h-20">
                 <!-- Logo -->
-                <div class="flex items-center flex-shrink-0">
+                <div class="flex items-start space-x-2 w-full flex-shrink-0">
                     <a href="/" class="flex items-center space-x-2 sm:space-x-3 group">
                         <img src="/public/favicon.svg?v=1.0.1" alt="MrHeadphones Logo" class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 transition-all duration-300 group-hover:scale-105">
                         <span class="font-heading font-bold text-base sm:text-lg lg:text-xl xl:text-2xl text-gray-900 dark:text-white">MrHeadphones</span>
@@ -37,7 +37,7 @@
                 </div>
                 
                 <!-- Desktop Navigation - Hidden on mobile -->
-                <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
+                <div class="hidden lg:flex items-center space-x-4 xl:space-x-6 2xl:space-x-8">
                     <a href="/#home" class="nav-link text-sm xl:text-base" data-translate="nav_home">Home</a>
                     <a href="/#categories" class="nav-link text-sm xl:text-base" data-translate="nav_categories">Categories</a>
                     <a href="/#devices" class="nav-link text-sm xl:text-base" data-translate="nav_devices">Devices</a>
@@ -74,11 +74,11 @@
         <!-- Mobile Menu - Responsive and accessible -->
         <div id="mobileMenu" class="hidden lg:hidden bg-white/98 dark:bg-gray-900/98 backdrop-blur-xl border-t border-gray-200/50 dark:border-gray-700/50 shadow-xl">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 space-y-1">
-                <a href="/#home" class="block py-3 px-4 rounded-xl hover:bg-gray-100/60 dark:hover:bg-gray-700/60 text-gray-900 dark:text-white font-medium transition-all duration-200 text-base sm:text-lg" data-translate="nav_home">Home</a>
-                <a href="/#categories" class="block py-3 px-4 rounded-xl hover:bg-gray-100/60 dark:hover:bg-gray-700/60 text-gray-900 dark:text-white font-medium transition-all duration-200 text-base sm:text-lg" data-translate="nav_categories">Categories</a>
-                <a href="/#devices" class="block py-3 px-4 rounded-xl hover:bg-gray-100/60 dark:hover:bg-gray-700/60 text-gray-900 dark:text-white font-medium transition-all duration-200 text-base sm:text-lg" data-translate="nav_devices">Devices</a>
-                <a href="/#solutions" class="block py-3 px-4 rounded-xl hover:bg-gray-100/60 dark:hover:bg-gray-700/60 text-gray-900 dark:text-white font-medium transition-all duration-200 text-base sm:text-lg" data-translate="nav_solutions">Solutions</a>
-                <a href="/#budget" class="block py-3 px-4 rounded-xl hover:bg-gray-100/60 dark:hover:bg-gray-700/60 text-gray-900 dark:text-white font-medium transition-all duration-200 text-base sm:text-lg" data-translate="nav_budget">Budget</a>
+                <a href="/#home" class="block py-2 sm:py-3 px-3 sm:px-4 rounded-xl hover:bg-gray-100/60 dark:hover:bg-gray-700/60 text-gray-900 dark:text-white font-medium transition-all duration-200 text-sm sm:text-base" data-translate="nav_home">Home</a>
+                <a href="/#categories" class="block py-2 sm:py-3 px-3 sm:px-4 rounded-xl hover:bg-gray-100/60 dark:hover:bg-gray-700/60 text-gray-900 dark:text-white font-medium transition-all duration-200 text-sm sm:text-base" data-translate="nav_categories">Categories</a>
+                <a href="/#devices" class="block py-2 sm:py-3 px-3 sm:px-4 rounded-xl hover:bg-gray-100/60 dark:hover:bg-gray-700/60 text-gray-900 dark:text-white font-medium transition-all duration-200 text-sm sm:text-base" data-translate="nav_devices">Devices</a>
+                <a href="/#solutions" class="block py-2 sm:py-3 px-3 sm:px-4 rounded-xl hover:bg-gray-100/60 dark:hover:bg-gray-700/60 text-gray-900 dark:text-white font-medium transition-all duration-200 text-sm sm:text-base" data-translate="nav_solutions">Solutions</a>
+                <a href="/#budget" class="block py-2 sm:py-3 px-3 sm:px-4 rounded-xl hover:bg-gray-100/60 dark:hover:bg-gray-700/60 text-gray-900 dark:text-white font-medium transition-all duration-200 text-sm sm:text-base" data-translate="nav_budget">Budget</a>
             </div>
         </div>
     </nav>
@@ -93,10 +93,10 @@
 </div>
     </section>
     <!-- Content Section -->
-    <section class="section-padding">
-        <div class="content-container">
+    <section class="py-12 sm:py-16 lg:py-20 xl:py-24">
+        <div class="content-container w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Introduction -->
-            <div class="content-container-wide">
+            <div class="content-container-wide w-full max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
                 <p class="text-lg text-gray-600 dark:text-gray-300 mb-6 responsive-text text-gray-200">
                     Closed-back headphones provide excellent sound isolation by sealing the ear cups, preventing sound from leaking in or out. This design makes them perfect for public use, recording studios, and environments where you need privacy or want to block out external noise.
                 </p>
@@ -108,78 +108,102 @@
                 <h2 class="font-heading font-bold text-2xl sm:text-3xl mb-8 text-center">
                     Our Top Closed-Back Picks
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 w-full max-w-7xl mx-auto items-stretch">
                     <!-- Product Card 1 -->
-                    <div class="card-hover">
-                        <div class="text-center mb-4 content-container">
+                    <div class="card-hover w-full p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex flex-col h-full min-h-0">
+                        <div class="text-center mb-4 w-full flex-1">
                             <div class="mb-4">
                                 <img src="/public/favicon.svg" alt="Headphones Icon" class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 transition-all duration-300 group-hover:scale-105">
-                            <h3 class="font-heading font-semibold text-xl mb-2">Beyerdynamic DT 770 Pro</h3>
-                            <p class="text-2xl font-bold text-secondary mb-2 responsive-text text-gray-200 text-gray-300">$159</p>
-                        <div class="space-y-3 mb-6">
-                            <div class="flex items-center flex-shrink-0">
+                            <h3 class="font-heading font-semibold text-xl mb-3 break-words leading-tight flex-shrink-0">Beyerdynamic DT 770 Pro</h3>
+                            <p class="text-2xl font-bold text-secondary mb-2 flex-shrink-0">$159</p>
+                        <div class="space-y-4 mb-6 w-full flex-1">
+                            <div class="flex items-start space-x-2 w-full flex-shrink-0">
                                 <span class="text-green-500 mr-2">✓</span>
-                                <span class="text-sm">Excellent isolation</span>
-                            <div class="flex items-center flex-shrink-0">
+                                <span class="text-sm break-words leading-relaxed">Excellent isolation</span>
+                            <div class="flex items-start space-x-2 w-full flex-shrink-0">
                                 <span class="text-green-500 mr-2">✓</span>
-                                <span class="text-sm">Studio-quality sound</span>
-                            <div class="flex items-center flex-shrink-0">
+                                <span class="text-sm break-words leading-relaxed">Studio-quality sound</span>
+                            <div class="flex items-start space-x-2 w-full flex-shrink-0">
                                 <span class="text-green-500 mr-2">✓</span>
-                                <span class="text-sm">Durable construction</span>
-                            <div class="flex items-center flex-shrink-0">
+                                <span class="text-sm break-words leading-relaxed">Durable construction</span>
+                            <div class="flex items-start space-x-2 w-full flex-shrink-0">
                                 <span class="text-red-500 mr-2">✗</span>
-                                <span class="text-sm">Requires amplifier</span>
-                        <a href="https://www.amazon.com/s?k=Beyerdynamic+DT+770+Pro+headphones&linkCode=ll2&tag=ngp0ba-20" class="btn-product" target="_blank" rel="noopener noreferrer">
+                                <span class="text-sm break-words leading-relaxed">Requires amplifier</span>
+                        <a href="https://www.amazon.com/s?k=Beyerdynamic+DT+770+Pro+headphones&linkCode=ll2&tag=ngp0ba-20" class="btn-product mt-auto w-full text-center" target="_blank" rel="noopener noreferrer">
                             Check Price
                         </a>
 </div>
                     <!-- Product Card 2 -->
-                    <div class="card-hover">
-                        <div class="text-center mb-4 content-container">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+                    <!-- Product Card 2 -->
+                    <div class="card-hover w-full p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex flex-col h-full min-h-0">
+                        <div class="text-center mb-4 w-full flex-1">
                             <div class="mb-4">
                                 <img src="/public/favicon.svg" alt="Headphones Icon" class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 transition-all duration-300 group-hover:scale-105">
-                            <h3 class="font-heading font-semibold text-xl mb-2">Audio-Technica ATH-M50x</h3>
-                            <p class="text-2xl font-bold text-secondary mb-2 responsive-text text-gray-200 text-gray-300">$149</p>
-                        <div class="space-y-3 mb-6">
-                            <div class="flex items-center flex-shrink-0">
+                            <h3 class="font-heading font-semibold text-xl mb-3 break-words leading-tight flex-shrink-0">Audio-Technica ATH-M50x</h3>
+                            <p class="text-2xl font-bold text-secondary mb-2 flex-shrink-0">$149</p>
+                        <div class="space-y-4 mb-6 w-full flex-1">
+                            <div class="flex items-start space-x-2 w-full flex-shrink-0">
                                 <span class="text-green-500 mr-2">✓</span>
-                                <span class="text-sm">Great sound isolation</span>
-                            <div class="flex items-center flex-shrink-0">
+                                <span class="text-sm break-words leading-relaxed">Great sound isolation</span>
+                            <div class="flex items-start space-x-2 w-full flex-shrink-0">
                                 <span class="text-green-500 mr-2">✓</span>
-                                <span class="text-sm">Enhanced bass response</span>
-                            <div class="flex items-center flex-shrink-0">
+                                <span class="text-sm break-words leading-relaxed">Enhanced bass response</span>
+                            <div class="flex items-start space-x-2 w-full flex-shrink-0">
                                 <span class="text-green-500 mr-2">✓</span>
-                                <span class="text-sm">Foldable design</span>
-                            <div class="flex items-center flex-shrink-0">
+                                <span class="text-sm break-words leading-relaxed">Foldable design</span>
+                            <div class="flex items-start space-x-2 w-full flex-shrink-0">
                                 <span class="text-red-500 mr-2">✗</span>
-                                <span class="text-sm">Wired only</span>
-                        <a href="https://www.amazon.com/s?k=Audio-Technica+ATH-M50x+headphones&linkCode=ll2&tag=ngp0ba-20" class="btn-product" target="_blank" rel="noopener noreferrer">
+                                <span class="text-sm break-words leading-relaxed">Wired only</span>
+                        <a href="https://www.amazon.com/s?k=Audio-Technica+ATH-M50x+headphones&linkCode=ll2&tag=ngp0ba-20" class="btn-product mt-auto w-full text-center" target="_blank" rel="noopener noreferrer">
                             Check Price
                         </a>
 </div>
                     <!-- Product Card 3 -->
-                    <div class="card-hover">
-                        <div class="text-center mb-4 content-container">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+                    <!-- Product Card 3 -->
+                    <div class="card-hover w-full p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex flex-col h-full min-h-0">
+                        <div class="text-center mb-4 w-full flex-1">
                             <div class="mb-4">
                                 <img src="/public/favicon.svg" alt="Headphones Icon" class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 transition-all duration-300 group-hover:scale-105">
-                            <h3 class="font-heading font-semibold text-xl mb-2">Sony WH-1000XM5</h3>
-                            <p class="text-2xl font-bold text-secondary mb-2 responsive-text text-gray-200 text-gray-300">$349</p>
-                        <div class="space-y-3 mb-6">
-                            <div class="flex items-center flex-shrink-0">
+                            <h3 class="font-heading font-semibold text-xl mb-3 break-words leading-tight flex-shrink-0">Sony WH-1000XM5</h3>
+                            <p class="text-2xl font-bold text-secondary mb-2 flex-shrink-0">$349</p>
+                        <div class="space-y-4 mb-6 w-full flex-1">
+                            <div class="flex items-start space-x-2 w-full flex-shrink-0">
                                 <span class="text-green-500 mr-2">✓</span>
-                                <span class="text-sm">Active noise cancellation</span>
-                            <div class="flex items-center flex-shrink-0">
+                                <span class="text-sm break-words leading-relaxed">Active noise cancellation</span>
+                            <div class="flex items-start space-x-2 w-full flex-shrink-0">
                                 <span class="text-green-500 mr-2">✓</span>
-                                <span class="text-sm">Excellent isolation</span>
-                            <div class="flex items-center flex-shrink-0">
+                                <span class="text-sm break-words leading-relaxed">Excellent isolation</span>
+                            <div class="flex items-start space-x-2 w-full flex-shrink-0">
                                 <span class="text-green-500 mr-2">✓</span>
-                                <span class="text-sm">30+ hour battery life</span>
-                            <div class="flex items-center flex-shrink-0">
+                                <span class="text-sm break-words leading-relaxed">30+ hour battery life</span>
+                            <div class="flex items-start space-x-2 w-full flex-shrink-0">
                                 <span class="text-red-500 mr-2">✗</span>
-                                <span class="text-sm">Premium price point</span>
-                        <a href="https://www.amazon.com/s?k=Sony+WH-1000XM5+headphones&linkCode=ll2&tag=ngp0ba-20" class="btn-product" target="_blank" rel="noopener noreferrer">
+                                <span class="text-sm break-words leading-relaxed">Premium price point</span>
+                        <a href="https://www.amazon.com/s?k=Sony+WH-1000XM5+headphones&linkCode=ll2&tag=ngp0ba-20" class="btn-product mt-auto w-full text-center" target="_blank" rel="noopener noreferrer">
                             Check Price
                         </a>
+</div>
+            <!-- Closed-Back Features Section -->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
             <!-- Closed-Back Features Section -->
             <div class="mb-12">
@@ -187,23 +211,25 @@
                     Essential Closed-Back Features
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="card-hover">
-                        <h3 class="font-heading font-semibold text-lg mb-3">Are closed-back headphones good for recording?</h3>
+                    <div class="card-hover w-full p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex flex-col h-full min-h-0">
+                        <h3 class="font-heading font-semibold text-lg mb-3 break-words leading-tight">Are closed-back headphones good for recording?</h3>
                         <p class="text-gray-600 dark:text-gray-300 responsive-text text-gray-200">
                             Yes, closed-back headphones are excellent for recording as they prevent sound leakage that could be picked up by microphones during sessions.
                         </p>
+            <!-- Related Articles -->
+</div>
             <!-- Related Articles -->
             <div class="mb-12">
                 <h2 class="font-heading font-bold text-2xl sm:text-3xl mb-8 text-center">
                     Related Articles
                 </h2>
-                <div class="related-articles-grid gap-8">
-                    <a href="/categories/best-studio-headphones/" class="related-article-btn">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 w-full max-w-7xl mx-auto items-stretch">
+                    <a href="/categories/best-studio-headphones/" class="related-article-btn w-full p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex flex-col h-full">
                         <h3>Best Studio Headphones</h3>
                         <p>Professional recording use.</p>
                     <span class="btn-primary btn-sm" data-translate="btn_read_more">Read More</span>
                     </button>
-                    <a href="/categories/best-noise-cancelling-headphones/" class="related-article-btn">
+                    <a href="/categories/best-noise-cancelling-headphones/" class="related-article-btn w-full p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex flex-col h-full">
                         <h3>Best Noise-Cancelling Headphones</h3>
                         <p>Advanced noise isolation.</p>
                     <span class="btn-primary btn-sm" data-translate="btn_read_more">Read More</span>
@@ -252,10 +278,10 @@
     </section>
     <!-- Footer -->
     <footer class="bg-primary text-white py-12">
-        <div class="content-container-wide">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="content-container-wide w-full max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
                 <div class="col-span-1 md:col-span-2">
-                    <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
+                    <div class="hidden lg:flex items-center space-x-4 xl:space-x-6 2xl:space-x-8">
                         <img src="../../../public/favicon.svg?v=1.0.1" alt="MrHeadphones Logo" class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 transition-all duration-300 group-hover:scale-105">
                         <span class="font-heading font-bold text-base sm:text-lg lg:text-xl xl:text-2xl text-gray-900 dark:text-white">MrHeadphones</span>
                     <p class="text-gray-300 mb-4 responsive-text text-gray-200">
