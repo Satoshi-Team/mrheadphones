@@ -124,7 +124,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
                 <a href="/categories/best-wireless-headphones/" class="category-card group">
                     <div class="mb-4">
-                        <img src="/public/favicon.svg" alt="Wireless Headphones" class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto">
+                        <img src="/public/favicon.svg" alt="Wireless Headphones" class="w-12 h-12 mx-auto">
                     </div>
                     <h3 class="font-heading font-semibold text-lg mb-2">Wireless</h3>
                     <p class="text-gray-600 dark:text-gray-300 text-sm">Freedom from cables</p>
@@ -132,7 +132,7 @@
                 
                 <a href="/categories/best-gaming-headsets/" class="category-card group">
                     <div class="mb-4">
-                        <img src="/public/favicon.svg" alt="Gaming Headsets" class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto">
+                        <img src="/public/favicon.svg" alt="Gaming Headsets" class="w-12 h-12 mx-auto">
                     </div>
                     <h3 class="font-heading font-semibold text-lg mb-2">Gaming</h3>
                     <p class="text-gray-600 dark:text-gray-300 text-sm">Immersive audio experience</p>
@@ -140,7 +140,7 @@
                 
                 <a href="/categories/best-noise-cancelling-headphones/" class="category-card group">
                     <div class="mb-4">
-                        <img src="/public/favicon.svg" alt="Noise Cancelling" class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto">
+                        <img src="/public/favicon.svg" alt="Noise Cancelling" class="w-12 h-12 mx-auto">
                     </div>
                     <h3 class="font-heading font-semibold text-lg mb-2">Noise Cancelling</h3>
                     <p class="text-gray-600 dark:text-gray-300 text-sm">Block out distractions</p>
@@ -148,7 +148,7 @@
                 
                 <a href="/categories/best-studio-headphones/" class="category-card group">
                     <div class="mb-4">
-                        <img src="/public/favicon.svg" alt="Studio Headphones" class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto">
+                        <img src="/public/favicon.svg" alt="Studio Headphones" class="w-12 h-12 mx-auto">
                     </div>
                     <h3 class="font-heading font-semibold text-lg mb-2">Studio</h3>
                     <p class="text-gray-600 dark:text-gray-300 text-sm">Professional audio quality</p>
@@ -156,7 +156,7 @@
                 
                 <a href="/categories/best-headphones-for-work/" class="category-card group">
                     <div class="mb-4">
-                        <img src="/public/favicon.svg" alt="Work Headphones" class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto">
+                        <img src="/public/favicon.svg" alt="Work Headphones" class="w-12 h-12 mx-auto">
                     </div>
                     <h3 class="font-heading font-semibold text-lg mb-2">Work</h3>
                     <p class="text-gray-600 dark:text-gray-300 text-sm">Productivity focused</p>
@@ -164,7 +164,7 @@
                 
                 <a href="/categories/best-travel-headphones/" class="category-card group">
                     <div class="mb-4">
-                        <img src="/public/favicon.svg" alt="Travel Headphones" class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto">
+                        <img src="/public/favicon.svg" alt="Travel Headphones" class="w-12 h-12 mx-auto">
                     </div>
                     <h3 class="font-heading font-semibold text-lg mb-2">Travel</h3>
                     <p class="text-gray-600 dark:text-gray-300 text-sm">Portable and durable</p>
@@ -172,7 +172,7 @@
                 
                 <a href="/categories/best-headphones-under-100/" class="category-card group">
                     <div class="mb-4">
-                        <img src="/public/favicon.svg" alt="Budget Headphones" class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto">
+                        <img src="/public/favicon.svg" alt="Budget Headphones" class="w-12 h-12 mx-auto">
                     </div>
                     <h3 class="font-heading font-semibold text-lg mb-2">Budget</h3>
                     <p class="text-gray-600 dark:text-gray-300 text-sm">Great value options</p>
@@ -180,7 +180,7 @@
                 
                 <a href="/categories/best-headphones-for-kids/" class="category-card group">
                     <div class="mb-4">
-                        <img src="/public/favicon.svg" alt="Kids Headphones" class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto">
+                        <img src="/public/favicon.svg" alt="Kids Headphones" class="w-12 h-12 mx-auto">
                     </div>
                     <h3 class="font-heading font-semibold text-lg mb-2">Kids</h3>
                     <p class="text-gray-600 dark:text-gray-300 text-sm">Safe and durable</p>
@@ -206,7 +206,7 @@
                 <div class="card-hover p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
                     <div class="text-center mb-4">
                         <div class="mb-4">
-                            <img src="/public/favicon.svg" alt="iPhone" class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto">
+                            <img src="/public/favicon.svg" alt="iPhone" class="w-12 h-12 mx-auto">
                         </div>
                         <h3 class="font-heading font-semibold text-xl mb-3">iPhone</h3>
                         <p class="text-gray-600 dark:text-gray-300 mb-4">Perfect compatibility with iOS devices</p>
@@ -239,7 +239,7 @@
                 <div class="card-hover p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
                     <div class="text-center mb-4">
                         <div class="mb-4">
-                            <img src="/public/favicon.svg" alt="Android" class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto">
+                            <img src="/public/favicon.svg" alt="Android" class="w-12 h-12 mx-auto">
                         </div>
                         <h3 class="font-heading font-semibold text-xl mb-3">Android</h3>
                         <p class="text-gray-600 dark:text-gray-300 mb-4">Optimized for Android ecosystem</p>
@@ -272,7 +272,7 @@
                 <div class="card-hover p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
                     <div class="text-center mb-4">
                         <div class="mb-4">
-                            <img src="/public/favicon.svg" alt="Gaming" class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto">
+                            <img src="/public/favicon.svg" alt="Gaming" class="w-12 h-12 mx-auto">
                         </div>
                         <h3 class="font-heading font-semibold text-xl mb-3">Gaming</h3>
                         <p class="text-gray-600 dark:text-gray-300 mb-4">Immersive gaming audio experience</p>
