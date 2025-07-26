@@ -1,0 +1,190 @@
+{
+  "meta_title": "MrHeadphones.com - Find Your Perfect Headphones",
+  "meta_description": "Discover the best headphones for every need. Expert reviews, comparisons, and recommendations for gaming, music, work, and more.",
+  
+  "nav_home": "Home",
+  "nav_categories": "Categories",
+  "nav_devices": "Devices",
+  "nav_solutions": "Solutions",
+  "nav_budget": "Budget",
+  
+  "hero_title": "Find Your Perfect Headphones",
+  "hero_subtitle": "Expert reviews and recommendations for every need, from gaming to music to work.",
+  "hero_cta_primary": "Explore Categories",
+  "hero_cta_secondary": "Compare Headphones",
+  
+  "section_categories_title": "Browse by Category",
+  "section_categories_subtitle": "Find headphones tailored to your specific needs and preferences.",
+  
+  "section_devices_title": "Browse by Device",
+  "section_devices_subtitle": "Find headphones optimized for your favorite devices and platforms.",
+  
+  "section_solutions_title": "Browse by Solution",
+  "section_solutions_subtitle": "Find headphones designed for specific use cases and environments.",
+  
+  "section_budget_title": "Browse by Budget",
+  "section_budget_subtitle": "Find great headphones at every price point.",
+  
+  "footer_about": "MrHeadphones.com is a user-first headphone discovery platform that helps you find the right pair based on real-world testing, expert research, and audio performance for every need.",
+  "footer_quick_links": "Quick Links",
+  "footer_connect": "Connect",
+  "footer_copyright": "© 2025 MrHeadphones.com. All rights reserved.",
+  
+  "btn_read_more": "Read More",
+  "btn_compare": "Compare",
+  "btn_compare_now": "Compare Now",
+  "btn_explore": "Explore",
+  "btn_learn_more": "Learn More",
+  "btn_view_all": "View All",
+  "btn_submit": "Submit",
+  "btn_send": "Send",
+  "btn_contact": "Contact",
+  "btn_about": "About",
+  "btn_privacy": "Privacy",
+  "btn_terms": "Terms",
+  "btn_email": "Email",
+  
+  "category_best_bass_headphones": "Best Bass Headphones",
+  "category_best_bass_headphones_desc": "Powerful bass for music lovers.",
+  
+  "category_best_bluetooth_headphones": "Best Bluetooth Headphones",
+  "category_best_bluetooth_headphones_desc": "Wireless freedom with great sound.",
+  
+  "category_best_budget_gaming_headphones": "Best Budget Gaming Headphones",
+  "category_best_budget_gaming_headphones_desc": "Affordable gaming audio solutions.",
+  
+  "category_best_budget_headphones_for_students": "Best Budget Headphones for Students",
+  "category_best_budget_headphones_for_students_desc": "Quality audio on a student budget.",
+  
+  "category_best_budget_wireless_headphones": "Best Budget Wireless Headphones",
+  "category_best_budget_wireless_headphones_desc": "Wireless convenience without breaking the bank.",
+  
+  "category_best_closed_back_headphones": "Best Closed-Back Headphones",
+  "category_best_closed_back_headphones_desc": "Isolation and privacy for focused listening.",
+  
+  "category_best_dynamic_driver_headphones": "Best Dynamic Driver Headphones",
+  "category_best_dynamic_driver_headphones_desc": "Classic sound with modern technology.",
+  
+  "category_best_electrostatic_headphones": "Best Electrostatic Headphones",
+  "category_best_electrostatic_headphones_desc": "Ultimate precision and clarity.",
+  
+  "category_best_foldable_headphones": "Best Foldable Headphones",
+  "category_best_foldable_headphones_desc": "Portable convenience for travelers.",
+  
+  "category_best_foldable_headphones_for_travel": "Best Foldable Headphones for Travel",
+  "category_best_foldable_headphones_for_travel_desc": "Compact audio companions for your journeys.",
+  
+  "category_best_gaming_headsets": "Best Gaming Headsets",
+  "category_best_gaming_headsets_desc": "Complete gaming audio solutions.",
+  
+  "category_best_headphones_for_airplane_travel": "Best Headphones for Airplane Travel",
+  "category_best_headphones_for_airplane_travel_desc": "Comfort and noise isolation for flights.",
+  
+  "category_best_headphones_for_android": "Best Headphones for Android",
+  "category_best_headphones_for_android_desc": "Optimized for Android devices.",
+  
+  "category_best_headphones_for_gaming": "Best Gaming Headphones",
+  "category_best_headphones_for_gaming_desc": "Complete guide to gaming audio solutions.",
+  
+  "category_best_headphones_for_iphone": "Best Headphones for iPhone",
+  "category_best_headphones_for_iphone_desc": "Perfect companions for Apple devices.",
+  
+  "category_best_headphones_for_kids": "Best Headphones for Kids",
+  "category_best_headphones_for_kids_desc": "Safe and durable audio for children.",
+  
+  "category_best_headphones_for_mac": "Best Headphones for Mac",
+  "category_best_headphones_for_mac_desc": "Optimized for Mac computers.",
+  
+  "category_best_headphones_for_macbook": "Best Headphones for MacBook",
+  "category_best_headphones_for_macbook_desc": "Perfect for MacBook users.",
+  
+  "category_best_headphones_for_music": "Best Headphones for Music",
+  "category_best_headphones_for_music_desc": "Exceptional sound quality for music lovers.",
+  
+  "category_best_headphones_for_ps5": "Best Headphones for PS5",
+  "category_best_headphones_for_ps5_desc": "Optimized picks for PlayStation 5 gaming.",
+  
+  "category_best_headphones_for_running": "Best Headphones for Running",
+  "category_best_headphones_for_running_desc": "Secure and comfortable for workouts.",
+  
+  "category_best_headphones_for_studying": "Best Headphones for Studying",
+  "category_best_headphones_for_studying_desc": "Focus and concentration for academic success.",
+  
+  "category_best_headphones_for_work": "Best Headphones for Work",
+  "category_best_headphones_for_work_desc": "Professional audio for productivity.",
+  
+  "category_best_headphones_for_work_from_home": "Best Headphones for Work from Home",
+  "category_best_headphones_for_work_from_home_desc": "Comfort and clarity for remote work.",
+  
+  "category_best_headphones_for_xbox": "Best Headphones for Xbox",
+  "category_best_headphones_for_xbox_desc": "Perfect audio companions for Xbox Series X/S.",
+  
+  "category_best_headphones_under_100": "Best Headphones Under $100",
+  "category_best_headphones_under_100_desc": "Quality audio on a budget.",
+  
+  "category_best_in_ear_monitors": "Best In-Ear Monitors",
+  "category_best_in_ear_monitors_desc": "Professional monitoring and personal listening.",
+  
+  "category_best_noise_cancelling_headphones": "Best Noise-Cancelling Headphones",
+  "category_best_noise_cancelling_headphones_desc": "Block out the world around you.",
+  
+  "category_best_noise_cancelling_headphones_for_travel": "Best Noise-Cancelling Headphones for Travel",
+  "category_best_noise_cancelling_headphones_for_travel_desc": "Peace and quiet on the go.",
+  
+  "category_best_noise_cancelling_headphones_under_200": "Best Noise-Cancelling Headphones Under $200",
+  "category_best_noise_cancelling_headphones_under_200_desc": "Affordable noise cancellation.",
+  
+  "category_best_office_headphones": "Best Office Headphones",
+  "category_best_office_headphones_desc": "Professional audio for the workplace.",
+  
+  "category_best_on_ear_headphones": "Best On-Ear Headphones",
+  "category_best_on_ear_headphones_desc": "Lightweight comfort and portability.",
+  
+  "category_best_open_back_headphones": "Best Open-Back Headphones",
+  "category_best_open_back_headphones_desc": "Natural soundstage and airy listening.",
+  
+  "category_best_over_ear_headphones_under_100": "Best Over-Ear Headphones Under $100",
+  "category_best_over_ear_headphones_under_100_desc": "Comfortable listening on a budget.",
+  
+  "category_best_planar_magnetic_headphones": "Best Planar Magnetic Headphones",
+  "category_best_planar_magnetic_headphones_desc": "Advanced technology for audiophiles.",
+  
+  "category_best_studio_headphones": "Best Studio Headphones",
+  "category_best_studio_headphones_desc": "Professional monitoring and mixing.",
+  
+  "category_best_travel_headphones": "Best Travel Headphones",
+  "category_best_travel_headphones_desc": "Portable audio for your adventures.",
+  
+  "category_best_waterproof_headphones": "Best Waterproof Headphones",
+  "category_best_waterproof_headphones_desc": "Durable audio for active lifestyles.",
+  
+  "category_best_wireless_earbuds": "Best Wireless Earbuds",
+  "category_best_wireless_earbuds_desc": "True wireless freedom and convenience.",
+  
+  "category_best_wireless_headphones": "Best Wireless Headphones",
+  "category_best_wireless_headphones_desc": "Cut the cord without losing quality.",
+  
+  "category_best_workout_headphones": "Best Workout Headphones",
+  "category_best_workout_headphones_desc": "Sweat-resistant audio for fitness.",
+  
+  "faq_title": "Frequently Asked Questions",
+  "related_articles_title": "Related Articles",
+  
+  "privacy_title": "Privacy Policy",
+  "privacy_subtitle": "Your privacy is important to us. This policy explains how we collect, use, and protect your information.",
+  
+  "terms_title": "Terms of Service",
+  "terms_subtitle": "Please read these terms carefully before using our website.",
+  
+  "contact_email": "hello@mrheadphones.com",
+  "contact_address": "Wyoming, United States",
+  "contact_website": "mrheadphones.com",
+  
+  "dark_mode_toggle": "Toggle dark mode",
+  "mobile_menu_toggle": "Toggle mobile menu",
+  
+  "loading": "Loading...",
+  "error_loading": "Error loading content",
+  "no_results": "No results found",
+  "back_to_top": "Back to top"
+} 
