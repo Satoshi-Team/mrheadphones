@@ -118,19 +118,13 @@ function initScrollTracking() {
   });
 }
 
-// Contact form handling
+// Contact form tracking (no longer handling submission - web3forms handles it)
 function initContactForm() {
   const contactForm = document.getElementById('contactForm');
   
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      
-      const formData = new FormData(contactForm);
-      const name = formData.get('name');
-      const email = formData.get('email');
-      const message = formData.get('message');
-      
+    // Track form submission without preventing default
+    contactForm.addEventListener('submit', () => {
       // Track form submission
       if (typeof gtag !== 'undefined') {
         gtag('event', 'form_submit', {
@@ -139,10 +133,6 @@ function initContactForm() {
           'value': 1
         });
       }
-      
-      // Show success message (in a real app, this would send to a server)
-      alert('Thank you for your message! We\'ll get back to you soon.');
-      contactForm.reset();
     });
   }
 }
